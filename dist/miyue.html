@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>秘爱</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <style>
+
+        .miai-page{
+            position:absolute;
+            z-index: 100 ;
+            width:100%;
+        }
+
+        .miai-page .mui-content>.mui-card:first-child{
+            margin: 0px;
+        }
+
+        .animate-page{
+            animation-duration: 0.5s;
+            position:absolute;
+            z-index:1000;
+            background-color:#efeff4;
+            height:100%;
+            display:none;
+            width:100%;
+        }
+
+        .animate-page .mui-card-header:after{
+            height:0px;
+        }
+
+        .homepage .mui-slider img{
+            height:163px;
+        }
+        .homepage .medal{
+            width:13px;
+            height:16px;
+            float:left;
+        }
+        .homepage .card-title{
+            width:119px;
+            height:16px;
+            font-size:16px;
+            font-family:PingFangSC-Medium;
+            line-height:16px;
+            float:left;
+            margin-left:5px;
+        }
+        .homepage .mui-card-content-inner{
+            height:130px;
+            width:1000px;
+            overflow:hidden;
+        }
+        .homepage .mui-card-content-inner img{
+            width:100px;
+            height:100px;
+            margin-right:10px;
+            border-radius:5px;
+        }
+        /**=========================今日女生样式BEGIN================================ */
+        #girl-detail-page .girl-tag{
+            height:22px;
+            border-radius:11px;
+            border:1px solid #EA6591;
+            width:100%;
+            text-align: center;
+            color:#666666;
+        }
+        #girl-detail-page div.girl-tag:before{
+            content: '';
+            background-image: url("img/icon-gtag.png");
+            background-size: 12px 12px;
+            width:12px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+            margin-right:3px;
+        }
+        #girl-detail-page .boy-tag{
+            height:22px;
+            border-radius:11px;
+            border:1px solid #6378F2;
+            width:100%;
+            text-align: center;
+            color:#666666;
+        }
+        #girl-detail-page div.boy-tag:before{
+            content: '';
+            background-image: url("img/icon-btag.png");
+            background-size: 12px 12px;
+            width:12px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+            margin-right:3px;
+        }
+
+        #girl-detail-page .photo-container img{
+            border-radius:4px;
+            margin-bottom:10px;
+        }
+
+        #girl-detail-page .button-know{
+            width:43%;
+            height:35px;
+            background-color:#FF9BBC;
+            color:#FFFFFF;
+            display:inline-block;
+            line-height:35px;
+            border-radius:2px;
+        }
+
+        #girl-detail-page a.button-know:before{
+            content: '';
+            background-image: url("img/icon-heart.png");
+            background-size: 17px 12px;
+            width:17px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+        }
+
+        #girl-detail-page .button-up{
+            width:43%;
+            height:35px;
+            background-color:#EA6591;
+            color:#FFFFFF;
+            display:inline-block;
+            line-height:35px;
+            border-radius:2px;
+        }
+
+        #girl-detail-page a.button-up:before{
+            content: '';
+            background-image: url("img/icon-up.png");
+            background-size: 14px 12px;
+            width:17px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+        }
+        /**=========================今日女生样式END================================ */
+
+        /**=========================今日男生样式BEGIN================================ */
+        #boy-detail-page .girl-tag{
+            height:22px;
+            border-radius:11px;
+            border:1px solid #EA6591;
+            width:100%;
+            text-align: center;
+            color:#666666;
+        }
+        #boy-detail-page div.girl-tag:before{
+            content: '';
+            background-image: url("img/icon-gtag.png");
+            background-size: 12px 12px;
+            width:12px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+            margin-right:3px;
+        }
+        #boy-detail-page .boy-tag{
+            height:22px;
+            border-radius:11px;
+            border:1px solid #6378F2;
+            width:100%;
+            text-align: center;
+            color:#666666;
+        }
+        #boy-detail-page div.boy-tag:before{
+            content: '';
+            background-image: url("img/icon-btag.png");
+            background-size: 12px 12px;
+            width:12px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+            margin-right:3px;
+        }
+
+        #boy-detail-page .photo-container img{
+            border-radius:4px;
+            margin-bottom:10px;
+        }
+
+        #boy-detail-page .button-know{
+            width:43%;
+            height:35px;
+            background-color:#94A4FF;
+            color:#FFFFFF;
+            display:inline-block;
+            line-height:35px;
+            border-radius:2px;
+        }
+
+        #boy-detail-page a.button-know:before{
+            content: '';
+            background-image: url("img/icon-heart.png");
+            background-size: 17px 12px;
+            width:17px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+        }
+
+        #boy-detail-page .button-up{
+            width:43%;
+            height:35px;
+            background-color:#6378F2;
+            color:#FFFFFF;
+            display:inline-block;
+            line-height:35px;
+            border-radius:2px;
+        }
+
+        #boy-detail-page a.button-up:before{
+            content: '';
+            background-image: url("img/icon-up.png");
+            background-size: 14px 12px;
+            width:17px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+        }
+        /**=========================今日男生样式END================================ */
+
+    </style>
+</head>
+
+<body>
+    <div id="main-page" class="miai-page homepage">
+
+        <nav class="mui-bar mui-bar-tab">
+            <a class="mui-tab-item" href="index.html">
+                <span class="mui-icon mui-icon-home"></span>
+                <span class="mui-tab-label">首页</span>
+            </a>
+            <a class="mui-tab-item mui-active" href="#tabbar-miyue">
+                <span class="mui-icon mui-icon-email"></span>
+                <span class="mui-tab-label">秘约记录</span>
+            </a>
+            <a class="mui-tab-item" href="#tabbar-fanpai">
+                <span class="mui-icon mui-icon-contact"></span>
+                <span class="mui-tab-label">翻牌</span>
+            </a>
+            <a class="mui-tab-item" href="#tabbar-joinus">
+                <span class="mui-icon mui-icon-gear"></span>
+                <span class="mui-tab-label">加入我们</span>
+            </a>
+        </nav>
+        <div class="mui-content">
+
+            <div id="/tabbar-homepage" class="mui-control-content mui-active">
+
+                <div id="homepage-slider" class="mui-slider" >
+                    <div class="mui-slider-group mui-slider-loop">
+                        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#">
+                                <img src="img/banner1.png">
+                            </a>
+                        </div>
+                        <!-- 第一张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="img/banner1.png">
+                            </a>
+                        </div>
+                        <!-- 第二张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="img/banner2.png">
+                            </a>
+                        </div>
+                        <!-- 第三张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="img/banner1.png">
+                            </a>
+                        </div>
+                        <!-- 第四张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="img/banner1.png">
+                            </a>
+                        </div>
+                        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#">
+                                <img src="img/banner1.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                    </div>
+                </div>
+
+                <div class="mui-card today-girl" style="margin:0px;">
+                    <div class="mui-card-header">
+                        <div>
+                            <img class="medal" src="img/medal-pink.png"/>
+                            <span class="card-title">今日女生</span>
+                        </div>
+                    </div>
+                    <div class="mui-card-content" style="overflow: scroll;">
+                        <div class="mui-card-content-inner">
+                            <img src="img/1.jpg"/>
+                            <img src="img/2.jpg"/>
+                            <img src="img/3.jpg"/>
+                            <img src="img/4.jpg"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mui-card today-boy" style="margin:10px 0px;">
+                    <div class="mui-card-header">
+                        <div>
+                            <img class="medal" src="img/medal-blue.png"/>
+                            <span class="card-title">今日男生</span>
+                        </div>
+                    </div>
+                    <div class="mui-card-content" style="overflow: scroll;">
+                        <div class="mui-card-content-inner">
+                            <img src="img/1.jpg"/>
+                            <img src="img/2.jpg"/>
+                            <img src="img/3.jpg"/>
+                            <img src="img/4.jpg"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- 今日女生详情页面BEGIN -->
+    <div id="girl-detail-page" class="animated fadeInRight miai-page animate-page">
+
+        <header class="mui-bar mui-bar-nav">
+            <a href="#" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">今日女生</h1>
+        </header>
+        <div class="mui-content">
+
+            <div class="mui-card">
+                <div class="mui-card-header mui-card-media" style="padding-left:15px;">
+                    <img src="img/1.jpg" style="border-radius:22px;width:44px;height:44px;"/>
+                    <div class="mui-media-body" style="font-family:PingFangSC-Medium;font-size:16px;margin-left:60px;padding-top:5px;">
+                        <div>严维维
+                            <div style="color:#FFFFFF;font-size:11px;background-image:url(img/icon-female.png);background-size:9px 9px;background-repeat:no-repeat;display:inline-block;background-color:#EA6591;width:28px;padding-left:12px;background-position:2px 4px;border-radius: 10px;">20</div>
+                        </div>
+                        <p style="font-size:14px;margin-top:5px;">编号： 苏州1908</p>
+                    </div>
+                </div>
+                <div class="mui-card-content">
+
+                    <div class="mui-row" style="padding-left: 15px;">
+                        <div class="mui-col-sm-3" style="width:22%;padding-top:3px;">
+                            <div style="width:4px;height:14px;border-radius:2px;background-color:#EA6591;float:left;"></div>
+                            <div style="padding-left:5px;line-height:14px;font-family:PingFangSC-Regular;color:rgba(102,102,102,1);float:left;">用户标签</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;">
+                            <div class="girl-tag">165+</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;margin-left:10px;">
+                            <div class="girl-tag">20-25岁</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;margin-left:10px;">
+                            <div class="girl-tag">开朗</div>
+                        </div>
+                    </div>
+
+                    <div class="mui-row" style="padding-left: 15px;margin-top:10px;">
+                        <div class="mui-col-sm-3" style="width:22%;padding-top:3px;">
+                            <div style="width:4px;height:14px;border-radius:2px;background-color:#6378F2;float:left;"></div>
+                            <div style="padding-left:5px;line-height:14px;font-family:PingFangSC-Regular;color:rgba(102,102,102,1);float:left;">交友要求</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;">
+                            <div class="boy-tag">型男</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;margin-left:10px;">
+                            <div class="boy-tag">肌肉男</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;margin-left:10px;">
+                            <div class="boy-tag">180/75</div>
+                        </div>
+                    </div>
+
+                    <div class="photo-container" style="padding: 15px;">
+                        <img src="img/photo1.png" alt="" width="100%"/>
+                        <img src="img/3.jpg" alt="" width="100%"/>
+                    </div>
+
+                    <div class="button-container" style="width:100%;position:fixed;bottom: 15px;text-align: center;">
+                        <a class="button-know" >认识她</a>
+                        <a class="button-up" >我要上墙</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- 今日女生详情页面END -->
+
+    <!-- 今日男生详情页面BEGIN -->
+    <div id="boy-detail-page" class="animated fadeInRight miai-page animate-page">
+
+        <header class="mui-bar mui-bar-nav">
+            <a href="#" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">今日男生</h1>
+        </header>
+        <div class="mui-content">
+
+            <div class="mui-card">
+                <div class="mui-card-header mui-card-media" style="padding-left:15px;">
+                    <img src="img/1.jpg" style="border-radius:22px;width:44px;height:44px;"/>
+                    <div class="mui-media-body" style="font-family:PingFangSC-Medium;font-size:16px;margin-left:60px;padding-top:5px;">
+                        <div>严维维
+                            <div style="color:#FFFFFF;font-size:11px;background-image:url(img/icon-male.png);background-size:9px 9px;background-repeat:no-repeat;display:inline-block;background-color:#6378F2;width:28px;padding-left:12px;background-position:2px 4px;border-radius: 10px;">20</div>
+                        </div>
+                        <p style="font-size:14px;margin-top:5px;">编号： 苏州1908</p>
+                    </div>
+                </div>
+                <div class="mui-card-content">
+
+                    <div class="mui-row" style="padding-left: 15px;">
+                        <div class="mui-col-sm-3" style="width:22%;padding-top:3px;">
+                            <div style="width:4px;height:14px;border-radius:2px;background-color:#6378F2;float:left;"></div>
+                            <div style="padding-left:5px;line-height:14px;font-family:PingFangSC-Regular;color:rgba(102,102,102,1);float:left;">用户标签</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;">
+                            <div class="boy-tag">型男</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;margin-left:10px;">
+                            <div class="boy-tag">肌肉男</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;margin-left:10px;">
+                            <div class="boy-tag">180/75</div>
+                        </div>
+                    </div>
+
+                    <div class="mui-row" style="padding-left: 15px;margin-top:10px;">
+                        <div class="mui-col-sm-3" style="width:22%;padding-top:3px;">
+                            <div style="width:4px;height:14px;border-radius:2px;background-color:#EA6591;float:left;"></div>
+                            <div style="padding-left:5px;line-height:14px;font-family:PingFangSC-Regular;color:rgba(102,102,102,1);float:left;">交友要求</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;">
+                            <div class="girl-tag">165+</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;margin-left:10px;">
+                            <div class="girl-tag">20-25岁</div>
+                        </div>
+                        <div class="mui-col-sm-3" style="width:22%;margin-left:10px;">
+                            <div class="girl-tag">开朗</div>
+                        </div>
+                    </div>
+
+
+                    <div class="photo-container" style="padding: 15px;">
+                        <img src="img/photo2.png" alt="" width="100%"/>
+                        <img src="img/3.jpg" alt="" width="100%"/>
+                    </div>
+
+                    <div class="button-container" style="width:100%;position:fixed;bottom: 15px;text-align: center;">
+                        <a class="button-know" >认识她</a>
+                        <a class="button-up" >我要上墙</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- 今日男生详情页面END -->
+
+</body>
+<script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/director.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        var currentWindow = null;
+
+        mui('body').on('tap','a',function(){
+            if($(this).hasClass("mui-action-back")){
+                currentWindow.close();
+                return false;
+            }
+            location.href=this.href;
+        });
+
+        var HomePage = {
+
+            init: function(){
+                $(".homepage .mui-card-content-inner").each(function(){
+                    $(this).css("width", $("img", this).length*125+"px");
+                });
+
+                $(".homepage .today-girl .mui-card-content-inner img").click(function(){
+                    HomePage.GirlPage.init();
+                });
+
+                $(".homepage .today-boy .mui-card-content-inner img").click(function(){
+                    HomePage.BoyPage.init();
+                });
+            },
+            GirlPage:{
+                init: function(){
+                    $("#girl-detail-page").fadeIn().removeClass("fadeOutRight").addClass("fadeInRight");
+                    $("#main-page").fadeOut();
+                    currentWindow = HomePage.GirlPage;
+                },
+
+                close: function(){
+                    $("#main-page").show();
+                    $("#girl-detail-page").removeClass("fadeInRight").addClass("fadeOutRight").fadeOut();
+                }
+            },
+
+            BoyPage:{
+                init: function(){
+                    $("#boy-detail-page").show().removeClass("fadeOutRight").addClass("fadeInRight");
+                    $("#main-page").fadeOut();
+                    currentWindow = HomePage.BoyPage;
+                },
+
+                close: function(){
+                    console.log("================");
+                    $("#main-page").show();
+                    $("#boy-detail-page").removeClass("fadeInRight").addClass("fadeOutRight").fadeOut();
+                }
+            },
+
+        }
+
+        var routes = {
+            '/tabbar-homepage': HomePage.init
+        };
+        var router = Router(routes);
+        router.init("/tabbar-homepage");
+
+
+    });
+</script>
+</html>

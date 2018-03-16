@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1273046609'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1273046609' type='text/javascript'%3E%3C/script%3E"));</script>
+<script>
+    _czc.push(["_setAutoPageview",false]);
+</script>
+<head>
+    <meta charset="utf-8">
+    <title>秘爱社交--全球领先泛两性交友社区</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/icons-extra.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link href="favicon1.ico" rel="icon" type="image/x-icon" />
+    <script type="text/javascript">
+
+        if(location.href.indexOf('?')==-1){
+            location.href = 'index.html?#/homepage'
+        }
+
+    </script>
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <style>
+
+        .mui-backdrop{
+            z-index:2500;
+            background-color:rgba(0,0,0,0.6);
+        }
+
+        .mui-bar-tab .mui-tab-item.mui-active{
+            color:#EA6591;
+        }
+        .miai-page{
+            position:absolute;
+            z-index: 100 ;
+            width:100%;
+            height:100%;
+        }
+
+        .miai-page .mui-content>.mui-card:first-child{
+            margin: 0px;
+        }
+
+        .animate-page{
+            animation-duration: 0.5s;
+            position:absolute;
+            z-index:1000;
+            background-color:#efeff4;
+            height:100%;
+            display:none;
+            width:100%;
+        }
+
+        .animate-page .mui-card-header:after{
+            height:0px;
+        }
+
+        #main-page .tab-homepage .mui-slider img{
+            height:163px;
+        }
+        #main-page .tab-homepage .medal{
+            width:13px;
+            height:16px;
+            float:left;
+        }
+        #main-page .tab-homepage .card-title{
+            width:119px;
+            height:16px;
+            font-size:16px;
+            font-family:PingFangSC-Medium;
+            line-height:16px;
+            float:left;
+            margin-left:5px;
+        }
+        #main-page .tab-homepage .mui-card-content-inner{
+            height:130px;
+            width:1000px;
+            overflow:hidden;
+        }
+        #main-page .tab-homepage .mui-card-content-inner img{
+            width:100px;
+            height:100px;
+            margin-right:10px;
+            border-radius:5px;
+        }
+        /**==========================秘约记录BEGIN=================================== */
+        .tab-miyuepage .miyue-tab{
+            text-align: center;
+            height:44px;
+            line-height:44px;
+            color:#000000;
+            font-size:16px;
+            font-family:PingFangSC-Regular;
+        }
+        .tab-miyuepage .miyue-tab.active{
+            border-bottom:3px solid #EA6591;
+        }
+        .tab-miyuepage .miyue-tab-left{
+            text-align:center;
+            height:35px;
+            background-color:#FFFFFF;
+            line-height:35px;
+            color:#EA6591;
+            border:1px solid #EA6591;
+            font-size:15px;
+            border-radius:5px 0px 0px 5px;
+        }
+        .tab-miyuepage .miyue-tab-left.active{
+            background-color:#EA6591;
+            color:#FFFFFF;
+        }
+        .tab-miyuepage .miyue-tab-right{
+            text-align:center;
+            height:35px;
+            background-color:#FFFFFF;
+            line-height:35px;
+            color:#EA6591;
+            border:1px solid #EA6591;
+            font-size:15px;
+            border-radius:0px 5px 5px 0px;
+        }
+        .tab-miyuepage .miyue-tab-right.active{
+            background-color:#EA6591;
+            color:#FFFFFF;
+        }
+        .tab-miyuepage .miyue-item{
+            height:150px;
+            margin:auto;
+            display:block;
+            background-size:100%;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            position:relative;
+        }
+        .tab-miyuepage .miyue-item>div{
+            position:absolute;
+            height:35px;
+            background-color:rgba(255,255,255,0.8);
+            bottom:0px;
+            text-align:center;
+            width:100%;
+            line-height:35px;
+            color:#666666;
+        }
+        .tab-miyuepage .photos-container img{
+            border-radius:5px;
+        }
+
+        /**=========================今日女生样式BEGIN================================ */
+        #girl-detail-page .girl-tag{
+            height:22px;
+            border-radius:11px;
+            border:1px solid #EA6591;
+            width:100%;
+            text-align: center;
+            color:#666666;
+            overflow:hidden;
+            white-space:nowrap;
+        }
+        #girl-detail-page div.girl-tag:before{
+            content: '';
+            background-image: url("img/icon-gtag.png");
+            background-size: 12px 12px;
+            width:12px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+            margin-right:3px;
+        }
+        #girl-detail-page .boy-tag{
+            height:22px;
+            border-radius:11px;
+            border:1px solid #6378F2;
+            width:100%;
+            text-align: center;
+            color:#666666;
+            overflow:hidden;
+            white-space:nowrap;
+        }
+        #girl-detail-page div.boy-tag:before{
+            content: '';
+            background-image: url("img/icon-btag.png");
+            background-size: 12px 12px;
+            width:12px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+            margin-right:3px;
+        }
+
+        #girl-detail-page .photo-container img{
+            border-radius:4px;
+            margin-bottom:10px;
+        }
+
+        #girl-detail-page .button-know{
+            width:43%;
+            height:35px;
+            background-color:#FF9BBC;
+            color:#FFFFFF;
+            display:inline-block;
+            line-height:35px;
+            border-radius:2px;
+        }
+
+        #girl-detail-page div.button-know:before{
+            content: '';
+            background-image: url("img/icon-heart.png");
+            background-size: 17px 12px;
+            width:17px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+        }
+
+        #girl-detail-page .button-up{
+            width:43%;
+            height:35px;
+            background-color:#EA6591;
+            color:#FFFFFF;
+            display:inline-block;
+            line-height:35px;
+            border-radius:2px;
+        }
+
+        #girl-detail-page div.button-up:before{
+            content: '';
+            background-image: url("img/icon-up.png");
+            background-size: 14px 12px;
+            width:17px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+        }
+        /**=========================今日女生样式END================================ */
+
+        /**=========================今日男生样式BEGIN================================ */
+        #boy-detail-page .girl-tag{
+            height:22px;
+            border-radius:11px;
+            border:1px solid #EA6591;
+            width:100%;
+            text-align: center;
+            color:#666666;
+            overflow:hidden;
+            white-space:nowrap;
+        }
+        #boy-detail-page div.girl-tag:before{
+            content: '';
+            background-image: url("img/icon-gtag.png");
+            background-size: 12px 12px;
+            width:12px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+            margin-right:3px;
+        }
+        #boy-detail-page .boy-tag{
+            height:22px;
+            border-radius:11px;
+            border:1px solid #6378F2;
+            width:100%;
+            text-align: center;
+            color:#666666;
+            overflow:hidden;
+            white-space:nowrap;
+        }
+        #boy-detail-page div.boy-tag:before{
+            content: '';
+            background-image: url("img/icon-btag.png");
+            background-size: 12px 12px;
+            width:12px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+            margin-right:3px;
+        }
+
+        #boy-detail-page .photo-container img{
+            border-radius:4px;
+            margin-bottom:10px;
+        }
+
+        #boy-detail-page .button-know{
+            width:43%;
+            height:35px;
+            background-color:#94A4FF;
+            color:#FFFFFF;
+            display:inline-block;
+            line-height:35px;
+            border-radius:2px;
+        }
+
+        #boy-detail-page div.button-know:before{
+            content: '';
+            background-image: url("img/icon-heart.png");
+            background-size: 17px 12px;
+            width:17px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+        }
+
+        #boy-detail-page .button-up{
+            width:43%;
+            height:35px;
+            background-color:#6378F2;
+            color:#FFFFFF;
+            display:inline-block;
+            line-height:35px;
+            border-radius:2px;
+        }
+
+        #boy-detail-page div.button-up:before{
+            content: '';
+            background-image: url("img/icon-up.png");
+            background-size: 14px 12px;
+            width:17px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+        }
+        /**=========================今日男生样式END================================ */
+
+        /**=========================秘约详情样式BEGIN============================== */
+        #miyue-detail-page .girl-tag{
+            height:22px;
+            border-radius:11px;
+            border:1px solid #EA6591;
+            width:100%;
+            text-align: center;
+            color:#666666;
+            overflow:hidden;
+            white-space:nowrap;
+        }
+        #miyue-detail-page div.girl-tag:before{
+            content: '';
+            background-image: url("img/icon-gtag.png");
+            background-size: 12px 12px;
+            width:12px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+            margin-right:3px;
+        }
+        #miyue-detail-page .boy-tag{
+            height:22px;
+            border-radius:11px;
+            border:1px solid #6378F2;
+            width:100%;
+            text-align: center;
+            color:#666666;
+            overflow:hidden;
+            white-space:nowrap;
+        }
+        #miyue-detail-page div.boy-tag:before{
+            content: '';
+            background-image: url("img/icon-btag.png");
+            background-size: 12px 12px;
+            width:12px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+            margin-right:3px;
+        }
+
+        #miyue-detail-page .button-join{
+            width:43%;
+            height:35px;
+            background-color:#FF9BBC;
+            color:#FFFFFF;
+            display:inline-block;
+            line-height:35px;
+            border-radius:2px;
+        }
+
+        #miyue-detail-page div.button-join:before{
+            content: '';
+            background-image: url("img/icon-miyue-join.png");
+            background-size: 17px 12px;
+            width:17px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+        }
+
+        #miyue-detail-page .button-intro{
+            width:43%;
+            height:35px;
+            background-color:#EA6591;
+            color:#FFFFFF;
+            display:inline-block;
+            line-height:35px;
+            border-radius:2px;
+        }
+
+        #miyue-detail-page div.button-intro:before{
+            content: '';
+            background-image: url("img/icon-miyue-intro.png");
+            background-size: 14px 12px;
+            width:17px;
+            height:12px;
+            display:inline-block;
+            background-repeat:no-repeat;
+        }
+        /**=========================秘约详情样式END============================== */
+
+        /**=========================翻牌样式BEGIN================================ */
+        div.pic-stack{
+            list-style:none;
+            width:65%;
+            display:block;
+            position:relative;
+            margin:auto;
+            padding:0px;
+            margin-top:150px;
+        }
+        div.pic-stack div{
+            display:block;
+            position:absolute;
+            bottom:0px;
+            left:0px;
+            box-shadow: 0px 0px 10px #888888;
+            background-color:#FFFFFF;
+            padding:0px;
+            margin:0px;
+            width:100%;
+            height:100%;
+            border-radius:5px;
+        }
+
+        .pic-stack img{
+            width:100%;
+            height:100%;
+            border-radius:5px;
+        }
+        .pic-stack span{
+            background-color:#FFFFFF;
+            opacity:0.8;
+            height:40px;
+            display:block;
+            bottom:0px;
+            position:absolute;
+            width:100%;
+            border-radius:0px 0px 5px 5px;
+            text-align:center;
+            line-height:40px;
+            color:#666;
+            font-size:14px;
+        }
+
+        @keyframes bounce1 {
+            from {;
+                transform: scaleX(1) scaleY(1) translateY(0px);
+            }
+
+            to {
+                transform: scaleX(1.15) scaleY(1.15) translateY(-25px);
+            }
+        }
+
+        @keyframes bounce2 {
+            from {;
+                transform: scaleX(1) scaleY(1) translateY(0px);
+            }
+
+            to {
+                transform: scaleX(1.3) scaleY(1.3) translateY(-47px);
+            }
+        }
+
+        .track1{
+            animation-name: bounce1;
+            animation-duration: 0.3s;
+            transform: scaleX(1.15) scaleY(1.15) translateY(-25px);
+            z-index:5;
+        }
+
+        .track0{
+            animation-name: bounce2;
+            animation-duration: 0.3s;
+            transform: scaleX(1.3) scaleY(1.3) translateY(-47px);
+            z-index:6;
+        }
+
+        .tab-fanpai .cities-tab{
+            text-align: center;
+            height:44px;
+            line-height:44px;
+            color:#000000;
+            font-size:16px;
+            font-family:PingFangSC-Regular;
+        }
+
+        .tab-fanpai .cities-tab.active{
+            color:#EA6591;
+            border-bottom:3px solid #EA6591;
+        }
+
+        /**=========================翻牌样式END================================ */
+
+
+
+        /**=========================图片预览样式BEGIN===========================*/
+        .mui-preview-image.mui-fullscreen {
+            position: fixed;
+            z-index: 2000;
+            background-color: #000;
+        }
+        .mui-preview-header,
+        .mui-preview-footer {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            z-index: 10;
+        }
+        .mui-preview-header {
+            height: 44px;
+            top: 0;
+        }
+        .mui-preview-footer {
+            height: 50px;
+            bottom: 0px;
+        }
+        .mui-preview-header .mui-preview-indicator {
+            display: block;
+            line-height: 25px;
+            color: #fff;
+            text-align: center;
+            margin: 15px auto;
+            width: 70px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            font-size: 16px;
+        }
+        .mui-preview-image {
+            display: none;
+            -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        .mui-preview-image.mui-preview-in {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+        }
+        .mui-preview-image.mui-preview-out {
+            background: none;
+            -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+        }
+        .mui-preview-image.mui-preview-out .mui-preview-header,
+        .mui-preview-image.mui-preview-out .mui-preview-footer {
+            display: none;
+        }
+        .mui-zoom-scroller {
+            position: absolute;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            -webkit-backface-visibility: hidden;
+        }
+        .mui-zoom {
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+        .mui-slider .mui-slider-group .mui-slider-item img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+            width: 100%;
+        }
+        .mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+            display: inline-table;
+        }
+        .mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .mui-preview-loading {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .mui-preview-loading.mui-active {
+            display: block;
+        }
+        .mui-preview-loading .mui-spinner-white {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -25px;
+            margin-top: -25px;
+            height: 50px;
+            width: 50px;
+        }
+        .mui-preview-image img.mui-transitioning {
+            -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        @-webkit-keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="main-page" class="miai-page">
+
+        <nav class="mui-bar mui-bar-tab">
+            <a class="mui-tab-item mui-active" id="tab/homepage" href="#/homepage">
+                <span class="mui-icon icon iconfont icon-home"></span>
+                <span class="mui-tab-label">首页</span>
+            </a>
+            <a class="mui-tab-item" id="tab/miyue/feedback" href="#/miyue/feedback">
+                <span class="mui-icon icon iconfont icon-record_create"></span>
+                <span class="mui-tab-label">秘约记录</span>
+            </a>
+            <a class="mui-tab-item" id="tab/fanpai" href="#/fanpai">
+                <span class="mui-icon mui-icon-extra mui-icon-extra-heart-filled"></span>
+                <span class="mui-tab-label">翻牌</span>
+            </a>
+            <a class="mui-tab-item" id="tab/joinus" href="#/joinus">
+                <span class="mui-icon icon iconfont icon-userplus"></span>
+                <span class="mui-tab-label">加入我们</span>
+            </a>
+        </nav>
+        <div class="mui-content">
+
+            <div id="/homepage" class="mui-control-content tab-homepage">
+
+            </div>
+
+            <div id="/miyue/feedback" class="mui-control-content tab-miyuepage">
+
+            </div>
+
+            <div id="/fanpai" class="mui-control-content tab-fanpai" style="background-color:#FFFFFF;min-height:100%;">
+
+            </div>
+
+            <div id="/joinus" class="mui-control-content tab-joinus" style="background-color:#FEF7F1;">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 今日女生详情页面BEGIN -->
+    <div id="girl-detail-page" class="animated fadeInRight miai-page animate-page">
+
+    </div>
+    <!-- 今日女生详情页面END -->
+
+    <!-- 今日男生详情页面BEGIN -->
+    <div id="boy-detail-page" class="animated fadeInRight miai-page animate-page">
+
+    </div>
+    <!-- 今日男生详情页面END -->
+
+    <div id="miyue-detail-page" class="animated fadeInRight miai-page animate-page">
+
+    </div>
+
+    <div id="fanpai-hougong-page" class="animated fadeInRight miai-page animate-page">
+
+    </div>
+
+    <div id="custom-page" class="animated fadeInRight miai-page animate-page">
+
+    </div>
+</body>
+
+
+<script id="girl-detail-template" type="x-tmpl-mustache">
+        <header class="mui-bar mui-bar-nav">
+            <a href="#" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">今日女生</h1>
+        </header>
+        <div class="mui-content">
+
+            <div class="mui-card">
+                <div class="mui-card-header mui-card-media" style="padding-left:15px;">
+                    <img src="{{headlogo}}" style="border-radius:22px;width:44px;height:44px;"/>
+                    <div class="mui-media-body" style="font-family:PingFangSC-Medium;font-size:16px;margin-left:60px;padding-top:5px;">
+                        <div>{{name}}
+                            <div style="color:#FFFFFF;font-size:11px;background-image:url(img/icon-female.png);background-size:9px 9px;background-repeat:no-repeat;display:inline-block;background-color:#EA6591;width:28px;padding-left:12px;background-position:2px 4px;border-radius: 10px;">{{age}}</div>
+                        </div>
+                        <p style="font-size:14px;margin-top:5px;">编号： {{code}}</p>
+                    </div>
+                </div>
+                <div class="mui-card-content">
+
+                    <div class="mui-row" style="padding-left: 15px;">
+                        <div class="mui-col-sm-3" style="width:22%;padding-top:3px;">
+                            <div style="width:4px;height:14px;border-radius:2px;background-color:#EA6591;float:left;"></div>
+                            <div style="padding-left:5px;line-height:14px;font-family:PingFangSC-Regular;color:rgba(102,102,102,1);float:left;">用户标签</div>
+                        </div>
+                        {{#tags}}
+                        <div class="mui-col-sm-3" style="width:22%;margin-right:10px;">
+                            <div class="girl-tag">{{.}}</div>
+                        </div>
+                        {{/tags}}
+                    </div>
+
+                    <div class="mui-row" style="padding-left: 15px;margin-top:10px;">
+                        <div class="mui-col-sm-3" style="width:22%;padding-top:3px;">
+                            <div style="width:4px;height:14px;border-radius:2px;background-color:#6378F2;float:left;"></div>
+                            <div style="padding-left:5px;line-height:14px;font-family:PingFangSC-Regular;color:rgba(102,102,102,1);float:left;">交友要求</div>
+                        </div>
+                        {{#demands}}
+                        <div class="mui-col-sm-3" style="width:22%;margin-right:10px;">
+                            <div class="boy-tag">{{.}}</div>
+                        </div>
+                        {{/demands}}
+                    </div>
+
+                    <div class="photo-container" style="padding: 15px;">
+                        {{#photos}}
+                        <img src="{{.}}" alt="" width="100%"/>
+                        {{/photos}}
+                    </div>
+
+                    <div class="button-container" style="width:100%;position:fixed;bottom: 15px;text-align: center;">
+                        <div class="button-know" >认识她</div>
+                        <div class="button-up" >我要上墙</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</script>
+
+<script id="boy-detail-template" type="x-tmpl-mustache">
+        <header class="mui-bar mui-bar-nav">
+            <a href="#" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">今日男生</h1>
+        </header>
+        <div class="mui-content">
+
+            <div class="mui-card">
+                <div class="mui-card-header mui-card-media" style="padding-left:15px;">
+                    <img src="{{headlogo}}" style="border-radius:22px;width:44px;height:44px;"/>
+                    <div class="mui-media-body" style="font-family:PingFangSC-Medium;font-size:16px;margin-left:60px;padding-top:5px;">
+                        <div>{{name}}
+                            <div style="color:#FFFFFF;font-size:11px;background-image:url(img/icon-male.png);background-size:9px 9px;background-repeat:no-repeat;display:inline-block;background-color:#6378F2;width:28px;padding-left:12px;background-position:2px 4px;border-radius: 10px;">{{age}}</div>
+                        </div>
+                        <p style="font-size:14px;margin-top:5px;">编号： {{code}}</p>
+                    </div>
+                </div>
+                <div class="mui-card-content">
+
+                    <div class="mui-row" style="padding-left: 15px;">
+                        <div class="mui-col-sm-3" style="width:22%;padding-top:3px;">
+                            <div style="width:4px;height:14px;border-radius:2px;background-color:#6378F2;float:left;"></div>
+                            <div style="padding-left:5px;line-height:14px;font-family:PingFangSC-Regular;color:rgba(102,102,102,1);float:left;">用户标签</div>
+                        </div>
+                        {{#tags}}
+                        <div class="mui-col-sm-3" style="width:22%;margin-right:10px;">
+                            <div class="boy-tag">{{.}}</div>
+                        </div>
+                        {{/tags}}
+                    </div>
+
+                    <div class="mui-row" style="padding-left: 15px;margin-top:10px;">
+                        <div class="mui-col-sm-3" style="width:22%;padding-top:3px;">
+                            <div style="width:4px;height:14px;border-radius:2px;background-color:#EA6591;float:left;"></div>
+                            <div style="padding-left:5px;line-height:14px;font-family:PingFangSC-Regular;color:rgba(102,102,102,1);float:left;">交友要求</div>
+                        </div>
+                        {{#demands}}
+                        <div class="mui-col-sm-3" style="width:22%;margin-right:10px;">
+                            <div class="girl-tag">{{.}}</div>
+                        </div>
+                        {{/demands}}
+                    </div>
+
+
+                    <div class="photo-container" style="padding: 15px;">
+                        {{#photos}}
+                        <img src="{{.}}" alt="" width="100%"/>
+                        {{/photos}}
+                    </div>
+
+                    <div class="button-container" style="width:100%;position:fixed;bottom: 15px;text-align: center;">
+                        <div class="button-know" >认识她</div>
+                        <div class="button-up" >我要上墙</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</script>
+
+<script id="homepage-template" type="x-tmpl-mustache">
+        <div id="homepage-slider" class="mui-slider" >
+            <div class="mui-slider-group mui-slider-loop">
+                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="{{lastbanner.url}}">
+                        <img src="{{lastbanner.fullimageurl}}">
+                    </a>
+                </div>
+                <!-- 第一张 -->
+                {{#banners}}
+                <div class="mui-slider-item">
+                    <a href="{{url}}">
+                        <img src="{{fullimageurl}}">
+                    </a>
+                </div>
+                {{/banners}}
+                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="{{firstbanner.url}}">
+                        <img src="{{firstbanner.fullimageurl}}">
+                    </a>
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                {{#banners}}
+                    <div class="mui-indicator"></div>
+                {{/banners}}
+            </div>
+        </div>
+
+        <div class="mui-card today-girl" style="margin:0px;">
+            <div class="mui-card-header">
+                <div>
+                    <img class="medal" src="img/medal-pink.png"/>
+                    <span class="card-title">今日女生</span>
+                </div>
+            </div>
+            <div class="mui-card-content" style="overflow: scroll;">
+                <div class="mui-card-content-inner">
+                    {{#girls}}
+                    <a href="#/homepage/girlpage/{{id}}"><img src="{{fullimageurl}}"/></a>
+                    {{/girls}}
+                </div>
+            </div>
+        </div>
+
+        <div class="mui-card today-boy" style="margin:10px 0px;">
+            <div class="mui-card-header">
+                <div>
+                    <img class="medal" src="img/medal-blue.png"/>
+                    <span class="card-title">今日男生</span>
+                </div>
+            </div>
+            <div class="mui-card-content" style="overflow: scroll;">
+                <div class="mui-card-content-inner">
+                    {{#boys}}
+                    <a href="#/homepage/boypage/{{id}}"><img src="{{fullimageurl}}"/></a>
+                    {{/boys}}
+                </div>
+            </div>
+        </div>
+
+        <div class="mui-row" style="margin-top:40px;margin-bottom:40px;">
+            <div class="mui-col-xs-6">
+                <div style="width:140px;background-color:#FFFFFF;height:200px;margin:auto;position:relative;text-align:center;padding-top:30px;">
+                    <div style="position:absolute;width:100%;text-align:center;top:-17px;"><img src="img/icon-homepage-boy.png" style="width:34px;height:34px;"/></div>
+                    <div style="color:#666666;line-height:30px;font-size:12px;font-family:PingFangSC-Regular;">男生通道</div>
+                    <div>
+                        <img src="{{boyqr.fullimageurl}}" style="width:100px;height:100px;border:4px solid #6378F2;"/>
+                    </div>
+                    <div style="color:#666666;line-height:30px;font-size:12px;font-family:PingFangSC-Regular;">{{boyqr.remark}}</div>
+                </div>
+            </div>
+            <div class="mui-col-xs-6">
+                <div style="width:140px;background-color:#FFFFFF;height:200px;margin:auto;position:relative;text-align:center;padding-top:30px;">
+                    <div style="position:absolute;width:100%;text-align:center;top:-17px;"><img src="img/icon-homepage-girl.png" style="width:34px;height:34px;"/></div>
+                    <div style="color:#666666;line-height:30px;font-size:12px;font-family:PingFangSC-Regular;">女生通道</div>
+                    <div>
+                        <img src="{{girlqr.fullimageurl}}" style="width:100px;height:100px;border:4px solid #6378F2;"/>
+                    </div>
+                    <div style="color:#666666;line-height:30px;font-size:12px;font-family:PingFangSC-Regular;">{{girlqr.remark}}</div>
+                </div>
+            </div>
+        </div>
+</script>
+
+<script id="miyue-current-template" type="x-tmpl-mustache">
+        <div class="mui-bar mui-bar-nav">
+            <div class="mui-row">
+                <a class="mui-col-xs-4 miyue-tab" href="#/miyue/feedback">精彩反馈</a>
+                <a class="mui-col-xs-4 miyue-tab" href="#/miyue/photos">ID照</a>
+                <a class="mui-col-xs-4 miyue-tab active" href="#/miyue/current">秘约信息</a>
+            </div>
+        </div>
+        <div style="height:60px;"></div>
+        <div id="miyue-password-container">
+            <div class="mui-row" style="text-align:center;margin-top:50px;">
+                <img src="img/miai-logo.png" style="width:150px;height:70px;"/>
+            </div>
+            <div class="mui-row" style="width:250px;margin:auto;margin-top:15px;">
+                <input id="password_input" type="password" placeholder="请输入查看密码" style="width:250px;height:50px;"/>
+                <div id="validate_password_button" style="width:250px;height:50px;background-color:#EA6591;margin:auto;line-height:50px;color:#FFFFFF;border-radius:5px;text-align:center;">确认</div>
+                <div style="color:#666666;font-size:16px;margin-top:25px;">已入会成员请联系客服获取</div>
+                <div style="display:inline-block;font-size:16px;color:#666666;margin-top:15px;">未入会成员请点击</div><div id="server_button" style="display:inline-block;width:100px;height:35px;border:1px solid #DDD;background-color:#FFFFFF;color:#EA6591;line-height:35px;text-align:center;border-radius:3px;">客服</div>
+            </div>
+        </div>
+        <div id="miyue-content-container" style="display:none;">
+            <div>
+                <div class="mui-row" style="width:60%;margin:auto;">
+                    <a id="miyue-current-tab" href="#/miyue/current" class="mui-col-xs-6 miyue-tab-left active" >今日秘约</a>
+                    <a id="miyue-history-tab" href="#/miyue/history" class="mui-col-xs-6 miyue-tab-right">往日秘约</a>
+                </div>
+            </div>
+
+            <div style="margin-top:15px;background-color:#FFFFFF;padding-top:5px;">
+                <ul class="mui-row" style="padding:0px 7px;list-style: none;">
+                    {{#.}}
+                    <li class="mui-col-xs-4 animated bounceIn" style="padding:0px 7px;margin-bottom:15px;">
+                        <a href="#/miyue/detail/{{id}}" class="miyue-item">
+                            <img src="{{fullimageurl}}" class="miyue-item"/>
+                            <div>{{code}}</div>
+                        </a>
+                    </li>
+                    {{/.}}
+                </ul>
+            </div>
+         </div>
+</script>
+
+<script id="miyue-history-template" type="x-tmpl-mustache">
+        <div class="mui-bar mui-bar-nav">
+            <div class="mui-row">
+                <a class="mui-col-xs-4 miyue-tab" href="#/miyue/feedback">精彩反馈</a>
+                <a class="mui-col-xs-4 miyue-tab" href="#/miyue/photos">ID照</a>
+                <a class="mui-col-xs-4 miyue-tab active" href="#/miyue/current">秘约信息</a>
+            </div>
+        </div>
+        <div style="height:60px;"></div>
+        <div>
+            <div class="mui-row" style="width:60%;margin:auto;">
+                <a id="miyue-current-tab" href="#/miyue/current" class="mui-col-xs-6 miyue-tab-left">今日秘约</a>
+                <a id="miyue-history-tab" href="#/miyue/history" class="mui-col-xs-6 miyue-tab-right active">往日秘约</a>
+            </div>
+        </div>
+
+        <div style="margin-top:15px;background-color:#FFFFFF;padding-top:5px;">
+            <div class="mui-row" style="line-height:44px;">
+                <div style="float:left;margin-left:15px;">{{currentCity}}</div>
+                <a href="#/fanpai/cities" style="width:100px;text-align:center;margin:auto;color:#000;display:block;">地区选择<div style="width:24px;height:13px;display:inline-block;margin-left:5px;background-image:url(img/icon-fanpai-arrow-down.png);background-size:24px 13px;"></div></a>
+            </div>
+            <ul class="mui-row" style="padding:0px 7px;list-style: none;margin:0px;">
+                {{#records}}
+                <li class="mui-col-xs-4 animated bounceIn" style="padding:0px 7px;margin-bottom:15px;">
+                    <a href="#/miyue/detail/{{id}}" class="miyue-item">
+                        <img src="{{fullimageurl}}" class="miyue-item"/>
+                        <div>{{code}}</div>
+                    </a>
+                </li>
+                {{/records}}
+            </ul>
+        </div>
+</script>
+
+<script id="miyue-detail-template" type="x-tmpl-mustache">
+        <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">秘约详情</h1>
+        </header>
+        <div class="mui-content">
+
+            <div class="mui-slider" >
+                <div class="mui-slider-group mui-slider-loop">
+                    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <img src="{{lastbanner.fullimageurl}}" data-preview-group="1">
+                    </div>
+                    <!-- 第一张 -->
+                    {{#banners}}
+                    <div class="mui-slider-item">
+                        <img src="{{fullimageurl}}" data-preview-src="{{sourceurl}}" data-preview-group="1">
+                    </div>
+                    {{/banners}}
+                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <img src="{{firstbanner.fullimageurl}}" data-preview-group="1">
+                    </div>
+                </div>
+                <div class="mui-slider-indicator">
+                    {{#banners}}
+                        <div class="mui-indicator"></div>
+                    {{/banners}}
+                </div>
+            </div>
+
+            <div class="mui-card" style="margin:0px;height:74px;margin-top:10px;padding-top:5px;">
+                <div class="mui-card-header mui-card-media" style="padding-left:15px;width:50%;float:left;">
+                    <img src="{{detail.headlogo}}" style="border-radius:22px;width:44px;height:44px;"/>
+                    <div class="mui-media-body" style="font-family:PingFangSC-Medium;font-size:16px;margin-left:55px;">
+                        <div>{{detail.name}}
+                            <div style="color:#FFFFFF;font-size:11px;background-image:url(img/icon-female.png);background-size:9px 9px;background-repeat:no-repeat;display:inline-block;background-color:#EA6591;width:28px;padding-left:12px;background-position:2px 4px;border-radius: 10px;">{{detail.age}}</div>
+                        </div>
+                        <p style="font-size:14px;margin-top:5px;">编号：{{detail.code}}</p>
+                    </div>
+                </div>
+                <div class="mui-card-header mui-card-media" style="padding-left:15px;width:50%;float:left;">
+                    <img src="img/icon-miyue-chat.png" style="border-radius:22px;width:44px;height:44px;"/>
+                    <div class="mui-media-body" style="font-family:PingFangSC-Medium;font-size:16px;margin-left:55px;">
+                        <div>聊天记录</div>
+                        <p style="font-size:14px;margin-top:5px;">编号：{{detail.chat}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mui-card" style="margin:0px;height:85px;margin-top:10px;">
+                <div class="mui-card-content">
+                    <div class="mui-row" style="padding-left: 15px;margin-top:15px;">
+                        <div class="mui-col-sm-3" style="width:22%;padding-top:3px;">
+                            <div style="width:4px;height:14px;border-radius:2px;background-color:#EA6591;float:left;"></div>
+                            <div style="padding-left:5px;line-height:14px;font-family:PingFangSC-Regular;color:rgba(102,102,102,1);float:left;">用户标签</div>
+                        </div>
+                        {{#detail.tags}}
+                        <div class="mui-col-sm-3" style="width:22%;margin-right:10px;">
+                            <div class="girl-tag">{{.}}</div>
+                        </div>
+                        {{/detail.tags}}
+                    </div>
+
+                    <div class="mui-row" style="padding-left: 15px;margin-top:10px;">
+                        <div class="mui-col-sm-3" style="width:22%;padding-top:3px;">
+                            <div style="width:4px;height:14px;border-radius:2px;background-color:#6378F2;float:left;"></div>
+                            <div style="padding-left:5px;line-height:14px;font-family:PingFangSC-Regular;color:rgba(102,102,102,1);float:left;">交友要求</div>
+                        </div>
+                        {{#detail.demands}}
+                        <div class="mui-col-sm-3" style="width:22%;margin-right:10px;">
+                            <div class="boy-tag">{{.}}</div>
+                        </div>
+                        {{/detail.demands}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-container" style="width:100%;position:fixed;bottom: 15px;text-align: center;">
+                <div class="button-join" >我要入会</div>
+                <div class="button-intro" >求介绍</div>
+            </div>
+
+        </div>
+</script>
+
+<script id="miyue-feedback-template" type="x-tmpl-mustache">
+    <div>
+        <div class="mui-bar mui-bar-nav">
+            <div class="mui-row">
+                <a class="mui-col-xs-4 miyue-tab active" href="#/miyue/feedback">精彩反馈</a>
+                <a class="mui-col-xs-4 miyue-tab" href="#/miyue/photos">ID照</a>
+                <a class="mui-col-xs-4 miyue-tab" href="#/miyue/current">秘约信息</a>
+            </div>
+        </div>
+        <div style="height:45px;"></div>
+        <div class="feedback-container">
+            {{#.}}
+            <div class="mui-row" style="margin-bottom:6px;">
+                <a href="{{linkurl}}"><img src="{{fullimageurl}}" alt="" class="animated bounceInLeft" style="width:100%;height:100%;"/></a>
+            </div>
+            {{/.}}
+        <div>
+    </div>
+</script>
+
+<script id="miyue-photos-template" type="x-tmpl-mustache">
+        <div class="mui-bar mui-bar-nav">
+            <div class="mui-row">
+                <a class="mui-col-xs-4 miyue-tab" href="#/miyue/feedback">精彩反馈</a>
+                <a class="mui-col-xs-4 miyue-tab active" href="#/miyue/photos">ID照</a>
+                <a class="mui-col-xs-4 miyue-tab" href="#/miyue/current">秘约信息</a>
+            </div>
+        </div>
+        <div style="height:30px;"></div>
+
+        <div class="mui-row photos-container" style="margin-top:15px;background-color:#FFFFFF;padding-top:20px;">
+            <div id="miyue-photos-container1" class="mui-col-xs-6" style="padding:0px 5px 0px 15px;">
+
+            </div>
+            <div id="miyue-photos-container2" class="mui-col-xs-6" style="padding:0px 15px 0px 5px;">
+
+            </div>
+        </div>
+</script>
+
+<script id="fanpai-template" type="x-tmpl-mustache">
+    <div style="overflow:hidden;">
+        <div class="mui-bar mui-bar-nav">
+            <div class="mui-row" style="line-height:44px;">
+                <div style="float:left">{{currentCity}}</div>
+                <a href="#/fanpai/cities" style="width:100px;text-align:center;margin:auto;color:#000;display:block;">地区选择<div style="width:24px;height:13px;display:inline-block;margin-left:5px;background-image:url(img/icon-fanpai-arrow-down.png);background-size:24px 13px;"></div></a>
+            </div>
+        </div>
+        <div style="height:10px;"></div>
+        <div id="fanpai-container" class="pic-stack">
+
+        </div>
+        <div class="row" style="margin-top:15px;">
+            <div class="mui-col-xs-6" style="center;float:left;">
+                <div id="fanpai-notlike-button" style="width:60px;height:60px;border-radius:30px;background-color:#FF9BBC;margin:auto;box-shadow:0px 7px 15px #BBBBBB;background-image:url(img/icon-fanpai-close.png);background-size:40% 40%;background-repeat:no-repeat;background-position:center;"></div>
+            </div>
+            <div class="mui-col-xs-6" style="float:left;">
+                <div id="fanpai-like-button" style="width:60px;height:60px;border-radius:30px;background-color:#EA6591;margin:auto;box-shadow:0px 7px 15px #BBBBBB;background-image:url(img/icon-fanpai-heart.png);background-size:40% 40%;background-repeat:no-repeat;background-position:center;"></div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div class="row" style="margin-top:15px;padding-bottom:30px;">
+            <a href="#/fanpai/hougong/{{uuid}}" style="width:60%;display:block;font-size:16px;background-color:#EA6591;border-radius:2px;color:#FFFFFF;height:40px;line-height:40px;margin:auto;text-align:center;">
+                我的后宫<span id="fanpai_selected_count" style="margin-left:5px;">{{selected.length}}</span>
+            </a>
+        </div>
+      </div>
+</script>
+
+<script id="fanpai-cities-template" type="x-tmpl-mustache">
+        <div class="mui-bar mui-bar-nav">
+            <div class="mui-row" style="line-height:44px;">
+                <a class="mui-action-back" style="width:110px;text-align:center;margin:auto;color:#000;display:block;">地区选择<div style="width:24px;height:13px;display:inline-block;margin-left:5px;background-image:url(img/icon-fanpai-arrow-up.png);background-size:24px 13px;"></div></a>
+            </div>
+        </div>
+        <div style="height:44px;background-color:#FAFAFA;"></div>
+        <div class="mui-row">
+            <div id="city-inside" class="mui-col-xs-6 cities-tab active" >境内</div>
+            <div id="city-outside" class="mui-col-xs-6 cities-tab" >境外</div>
+        </div>
+        <div style="background-color:#FAFAFA;padding-top:10px;">
+            <span style="margin-left:10px;color:#999999;">国内热门城市<span>
+            <div class="mui-row" style="margin-top:10px;">
+                {{#hots}}
+                    <div class="mui-col-xs-4 city-item" style="padding:5px 10px;"><div style="height:30px;background-color:#FFFFFF;line-height:30px;text-align:center;border:1px solid #999999;color:#000000;">{{.}}</div></div>
+                {{/hots}}
+            </div>
+        <div>
+
+        <div class="mui-indexed-list" style="margin-top:10px;">
+            <div class="mui-indexed-list-inner">
+                <ul id="city-inside-container" class="mui-table-view">
+                    {{#inside}}
+                        {{#group}}<li data-group="A" class="mui-table-view-divider mui-indexed-list-group">{{label}}</li>{{/group}}
+                        {{^group}}<li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item city-item">{{label}}</li>{{/group}}
+                    {{/inside}}
+                </ul>
+                <ul id="city-outside-container" style="display:none;" class="mui-table-view">
+                    {{#outside}}
+                        {{#group}}<li data-group="A" class="mui-table-view-divider mui-indexed-list-group">{{label}}</li>{{/group}}
+                        {{^group}}<li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item city-item">{{label}}</li>{{/group}}
+                    {{/outside}}
+                </ul>
+            </div>
+        </div>
+</script>
+
+<script id="fanpai-hougong-template" type="x-tmpl-mustache">
+        <div class="mui-bar mui-bar-nav" >
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的后宫</h1>
+        </div>
+        <div style="height:40px;background-color:#FFFFFF;"></div>
+        <div id="hougong-photos-container-none">
+            <img src="img/bg-404.png" style="width:100%;margin-top:85px;"/>
+            <div style="margin-top:30px;text-align:center;color:#999999;font-family:PingFangSC-Regular;">对不起，还没有关注的后宫</div>
+        </div>
+        <div id="hougong-photos-container" class="mui-row" style="background-color:#FFFFFF;padding:5px;padding-top:20px;min-height:100%;margin-bottom:120px;">
+            {{#selected}}
+            <div class="mui-col-xs-6" style="padding:0px 5px 10px 5px;">
+                 <div style="box-shadow:0px 5px 10px #CCCCCC;">
+                     <img style="width:100%;" src="{{hougongurl}}" data-preview-src="{{sourceurl}}" data-preview-group="10"/>
+
+                     <div style="position:absolute;top:0px;right:5px;width:0px;height:0px;border-top:20px solid #FFF;border-right:20px solid #FFF;border-left:20px solid transparent;border-bottom:20px solid transparent;opacity:0.9;">
+                        <div data={{id}} class="hougong-item-trash" style="position:absolute;top:-20px;width:20px;height:20px;background-color:#FFF;right:-20px;text-align:center;color:#999;">X</div>
+                    </div>
+                     <div style="position:absolute;bottom:0px;margin-bottom:10px;width:100%;background-color:#FFFFFF;opacity:0.9;text-align:center;height:35px;line-height:35px;color:#999;">{{code}}</div>
+                </div>
+            </div>
+            {{/selected}}
+        </div>
+
+        <div id="hougong-photos-share" class="mui-row" style="padding: 0px 0px 50px 0px;width:100%;position:fixed;bottom:0px;">
+             <div class="mui-col-xs-8">
+                <div id="hougong-share-button" style="width:200px;height:35px;border-radius:2px;background-color:#EA6591;margin:auto;line-height:35px;color:#FFFFFF;text-align:center;">发送结果给秘酱</div>
+            </div>
+            <div class="mui-col-xs-4">
+                <div id="hougong-clear-button" style="width:80px;height:35px;border-radius:2px;background-color:#FFFFFF;line-height:35px;color:#EA6591;padding-left:15px;margin:auto;border:1px solid #EA6591;background-image:url(img/icon-fanpai-trash.png);background-size:12px 15px;background-repeat:no-repeat;background-position:55px 10px;">清空</div>
+            </div>
+        </div>
+</script>
+
+
+<script id="joinus-template" type="x-tmpl-mustache">
+        <div class="mui-row" style="background-image:url(img/bg-joinus.jpg);height:100%;width:100%;background-size:100%;background-repeat:no-repeat;padding-top:150px;">
+              <div id="boy_channel_button" style="height:60px;background-color:#6378F2;line-height:60px;color:#FFFFFF;border-radius:2px;margin:auto;width:75%;font-size:20px;text-align:center;box-shadow:0px 5px 10px #AAAAAA;">男生通道</div>
+              <div id="girl_channel_button" style="height:60px;background-color:#EA6591;line-height:60px;color:#FFFFFF;border-radius:2px;margin:auto;width:75%;font-size:20px;text-align:center;margin-top:20px;box-shadow:0px 5px 10px #AAAAAA;">女生通道</div>
+              <div id="weixin_button" style="height:60px;background-color:#6378F2;line-height:60px;color:#FFFFFF;border-radius:2px;margin:auto;width:75%;font-size:20px;text-align:center;margin-top:20px;box-shadow:0px 5px 10px #AAAAAA;">微信公众号</div>
+              <a href="#/custompage/351930f6aab649b7996da41216ffc0d5" style="display:block;height:60px;background-color:#EA6591;line-height:60px;color:#FFFFFF;border-radius:2px;margin:auto;width:75%;font-size:20px;text-align:center;margin-top:20px;box-shadow:0px 5px 10px #AAAAAA;">关于我们</a>
+        </div>
+</script>
+
+
+<script id="custom-page-template" type="x-tmpl-mustache">
+        <div class="mui-bar mui-bar-nav" >
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">{{name}}</h1>
+        </div>
+        <div style="height:50px;background-color:#FFFFFF;"></div>
+        <img style="width:100%;" src="{{fullimageurl}}"/>
+        <div class="mui-row" style="padding:15px;background-color:#FFFFFF;">
+            <div style="text-align:center;font-size:20px;font-family:PingFangSC-Semibold;margin:10px 0px;color:#666666;">{{title}}</div>
+            <div style="font-family:PingFangSC-Semibold;color:#666666;overflow-x:hidden;">
+                  {{{content}}}
+            </div>
+        </div>
+</script>
+
+
+<script id="qrcode-boy-template" type="x-tmpl-mustache">
+        <div class="animated bounceIn" style="position:fixed;background-color:#FFFFFF;width:240px;height:260px;z-index:3000;border-radius:5px;">
+            <div style="width:150px;margin:auto;margin-top:40px;text-align:center;">
+                <img style="width:125px;height:125px;border:5px solid #6378F2;box-sizing:border-box;margin-bottom:10px;" src="{{fullimageurl}}"/>
+                <p>{{remark}}</p>
+                <!--<p>微信扫码管理脸</p>
+                <p>获得她的联系方式吧~</p>-->
+            </div>
+        </div>
+</script>
+
+<script id="qrcode-member-template" type="x-tmpl-mustache">
+        <div class="animated bounceIn" style="position:fixed;background-color:#FFFFFF;width:240px;height:260px;z-index:3000;border-radius:5px;">
+            <div style="width:150px;margin:auto;margin-top:40px;text-align:center;">
+                <img style="width:125px;height:125px;border:5px solid #6378F2;box-sizing:border-box;margin-bottom:10px;" src="{{fullimageurl}}"/>
+                <p>{{remark}}</p>
+                <!--<p>微信扫码管理脸</p>
+                <p>获得她的联系方式吧~</p>-->
+            </div>
+        </div>
+</script>
+
+<script id="qrcode-girl-template" type="x-tmpl-mustache">
+        <div class="animated bounceIn" style="position:fixed;background-color:#FFFFFF;width:240px;height:260px;z-index:3000;border-radius:5px;">
+            <div style="width:150px;margin:auto;margin-top:40px;text-align:center;">
+                <img style="width:125px;height:125px;border:5px solid #EA6591;box-sizing:border-box;margin-bottom:10px;" src="{{fullimageurl}}"/>
+                <p>{{remark}}</p>
+                <!--<p>微信扫码管理脸</p>
+                <p>获得她的联系方式吧~</p>-->
+            </div>
+        </div>
+</script>
+
+<script id="qrcode-boy-channel-template" type="x-tmpl-mustache">
+        <div class="animated bounceIn" style="position:fixed;background-color:#FFFFFF;width:240px;height:260px;z-index:3000;border-radius:5px;">
+            <div style="width:150px;margin:auto;margin-top:40px;text-align:center;">
+                <img style="width:125px;height:125px;border:5px solid #6378F2;box-sizing:border-box;margin-bottom:10px;" src="{{fullimageurl}}"/>
+                <p>{{remark}}</p>
+                <!--<p>微信扫码管理脸</p>
+                <p>获得她的联系方式吧~</p>-->
+            </div>
+        </div>
+</script>
+
+<script id="qrcode-girl-channel-template" type="x-tmpl-mustache">
+        <div class="animated bounceIn" style="position:fixed;background-color:#FFFFFF;width:240px;height:260px;z-index:3000;border-radius:5px;">
+            <div style="width:150px;margin:auto;margin-top:40px;text-align:center;">
+                <img style="width:125px;height:125px;border:5px solid #EA6591;box-sizing:border-box;margin-bottom:10px;" src="{{fullimageurl}}"/>
+                <p>{{remark}}</p>
+                <!--<p>微信扫码管理脸</p>
+                <p>获得她的联系方式吧~</p>-->
+            </div>
+        </div>
+</script>
+
+<script id="qrcode-weixin-template" type="x-tmpl-mustache">
+        <div class="animated bounceIn" style="position:fixed;background-color:#FFFFFF;width:240px;height:260px;z-index:3000;border-radius:5px;">
+            <div style="width:150px;margin:auto;margin-top:40px;text-align:center;">
+                <img style="width:125px;height:125px;border:5px solid #6378F2;box-sizing:border-box;margin-bottom:10px;" src="{{fullimageurl}}"/>
+                <p>{{remark}}</p>
+                <!--<p>微信扫码管理脸</p>
+                <p>获得她的联系方式吧~</p>-->
+            </div>
+        </div>
+</script>
+
+<script id="hougong-share-template" type="x-tmpl-mustache">
+        <div class="animated bounceIn" style="position:fixed;width:280px;height:160px;z-index:3000;">
+            <div style="width:100%;height:100px;margin:auto;text-align:center;border-radius:5px;border:2px dotted #FFFFFF;color:#FFFFFF;line-height:30px;padding-top:20px;">
+                还没有添加秘酱的女生，快去<br/>加微信吧，微信号XXXXXX
+            </div>
+            <div id="hougong_share_close_button" style="width:100px;text-align:center;height:35px;background-color:#FC5991;line-height:35px;color:#FFFFFF;margin:auto;margin-top:20px;">知道了</div>
+        </div>
+</script>
+
+<script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/mustache.min.js"></script>
+<script type="text/javascript" src="js/director.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/mui.zoom.js"></script>
+<script type="text/javascript" src="js/mui.previewimage.js"></script>
+<script type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+
+<script type="text/javascript">
+
+    $(function(){
+
+        $.ajaxSetup({
+            error: function(){
+//                mui.alert("服务器内部错误，请联系管理员", "提示")
+            }
+        });
+
+        //var basepath = "http://192.168.0.109:8080/jeesite";
+        var basepath = "http://www.melovepp.com/jeesite";
+        var currentCity = remote_ip_info['province'];
+
+        mui('body').on('tap','a',function(){
+
+            var $this = $(this);
+            if($this.hasClass("mui-action-back")){
+                history.back();
+                if(CustomPage.state){
+                    CustomPage.close();
+                }
+                return false;
+            }
+            if($this.hasClass("mui-tab-item")){
+                var tabName = $this.attr("href").replace("#", "");
+                activeTab(tabName);
+            }
+            location.href=this.href;
+        });
+
+        function activeTab(tabName){
+            tabName = tabName.replace(/\//g, "\\/");
+            $(".mui-tab-item").removeClass("mui-active");
+            $(".mui-control-content").removeClass("mui-active");
+            $("#tab"+tabName).addClass("mui-active");
+            $("#"+tabName).addClass("mui-active");
+        }
+
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+
+        var currentWindow = null;
+
+
+        var homepage_template = $('#homepage-template').html();
+        var girl_detail_template = $("#girl-detail-template").html();
+        var boy_detail_template = $("#boy-detail-template").html();
+        var HomePage = {
+
+            loaded: false,
+
+            init: function(){
+
+                if(IsPC()){
+                    location.href = "miaiweb/index.jsp";
+                    return false;
+                }
+                _czc.push(﻿["_trackPageview","index.html?#/homepage"]);
+
+                currentWindow = HomePage;
+                activeTab("/homepage");
+                HomePage.GirlPage.close();
+                HomePage.BoyPage.close();
+
+                if(!HomePage.loaded){
+                    var pageData = HomePage.getPageData();
+                    PageMask.getPageData(PageMask.QRCODE_BOY, function(item){
+                        pageData.boyqr = item;
+                    });
+                    PageMask.getPageData(PageMask.QRCODE_GIRL, function(item){
+                        pageData.girlqr = item;
+                    });
+                    var rendered = Mustache.render(homepage_template, pageData);
+                    $("#\\/homepage").html(rendered);
+
+                    mui('.mui-slider').slider();
+
+                    $("#main-page .mui-card-content-inner").each(function(){
+                        $(this).css("width", $("img", this).length*130+"px");
+                    });
+
+                    $("#main-page .today-girl .mui-card-content-inner img").click(function(){
+                        HomePage.GirlPage.init();
+                    });
+
+                    $("#main-page .today-boy .mui-card-content-inner img").click(function(){
+                        HomePage.BoyPage.init();
+                    });
+
+                    HomePage.loaded = true;
+                }
+
+            },
+
+            getPageData: function(){
+                var pageData = {
+                    banners: [],
+                    firstbanner: {},
+                    lastbanner:{},
+                    girls:[],
+                    boys:[]
+                };
+                //===========================获取banner数据==========================================
+                $.ajax({
+                    url: basepath+"/a/miai/miaiBanner/get/bannerList",
+                    type:"get",
+                    async:false,
+                    success: function(res){
+                        pageData.banners = res.data;
+                    }
+                });
+
+                $(pageData.banners).each(function(idx, banner){
+                    banner.fullimageurl = basepath+banner.imageUrl+"?width=750&height=326";
+                });
+                if(pageData.banners.length>0) {
+                    pageData.firstbanner = pageData.banners[0];
+                    pageData.lastbanner = pageData.banners[pageData.banners.length - 1];
+                }
+                //============================获取今日男生女生数据===================================
+                $.ajax({
+                    url: basepath+"/a/miai/miaiUser/get/todayList",
+                    type:"get",
+                    async:false,
+                    success: function(res){
+                        pageData.girls = res.girl;
+                        pageData.boys = res.boy;
+                    }
+                });
+                $(pageData.girls).each(function(idx, girl){
+                    girl.fullimageurl = basepath + girl.photoUrl02+"?width=200&height=200";
+                });
+                $(pageData.boys).each(function(idx, boy){
+                    boy.fullimageurl = basepath + boy.photoUrl02+"?width=200&height=200";
+                });
+                return pageData;
+            },
+
+            GirlPage:{
+                init: function(code){
+
+                    if(IsPC()){
+                        location.href = "miaiweb/girl_detail.jsp?id="+code;
+                        return false;
+                    }
+                    _czc.push(﻿["_trackPageview","index.html?#/homepage/girlpage/"+code]);
+
+                    currentWindow = HomePage.GirlPage;
+                    var pageData = HomePage.GirlPage.getPageData(code);
+                    var rendered = Mustache.render(girl_detail_template, pageData);
+                    $("#girl-detail-page").html(rendered);
+
+                    $("#girl-detail-page .button-know").click(PageMask.showBoyQrCode);
+                    $("#girl-detail-page .button-up").click(PageMask.showGrilQrCode);
+
+                    $("#girl-detail-page").fadeIn().removeClass("fadeOutRight").addClass("fadeInRight");
+                    $("#main-page").fadeOut();
+                },
+
+                close: function(){
+                    $("#main-page").show();
+                    $("#girl-detail-page").removeClass("fadeInRight").addClass("fadeOutRight").fadeOut();
+                },
+
+                getPageData: function(code){
+                    var pageData = {};
+                    $.ajax({
+                        url: basepath+"/a/miai/miaiUser/get/one?id="+code,
+                        type:"get",
+                        async:false,
+                        success: function(res){
+                            pageData = res.data;
+                        }
+                    });
+                    var photos = [];
+                    $(pageData.photos).each(function(idx, photo){
+                        photos.push(basepath + photo+"?width=750");
+                    });
+                    pageData.headlogo = basepath+pageData.photoUrl01+"?width=100&height=100";
+                    pageData.photos = photos;
+                    return pageData;
+                }
+            },
+
+            BoyPage:{
+                init: function(code){
+
+                    if(IsPC()){
+                        location.href = "miaiweb/boy_detail.jsp?id="+code;
+                        return false;
+                    }
+                    _czc.push(﻿["_trackPageview","index.html?#/homepage/boypage/"+code]);
+                    currentWindow = HomePage.BoyPage;
+
+                    var pageData = HomePage.BoyPage.getPageData(code);
+                    var rendered = Mustache.render(boy_detail_template, pageData);
+                    $("#boy-detail-page").html(rendered);
+
+                    $("#boy-detail-page .button-know").click(PageMask.showGrilQrCode);
+                    $("#boy-detail-page .button-up").click(PageMask.showMemberQrCode);
+
+                    $("#boy-detail-page").show().removeClass("fadeOutRight").addClass("fadeInRight");
+                    $("#main-page").fadeOut();
+                },
+
+                close: function(){
+                    $("#main-page").show();
+                    $("#boy-detail-page").removeClass("fadeInRight").addClass("fadeOutRight").fadeOut();
+                },
+                getPageData: function(code){
+                    var pageData = {};
+                    $.ajax({
+                        url: basepath+"/a/miai/miaiUser/get/one?id="+code,
+                        type:"get",
+                        async:false,
+                        success: function(res){
+                            pageData = res.data;
+                        }
+                    });
+                    var photos = [];
+                    $(pageData.photos).each(function(idx, photo){
+                        photos.push(basepath + photo+"?width=750");
+                    });
+                    pageData.headlogo = basepath+pageData.photoUrl01+"?width=100&height=100";
+                    pageData.photos = photos;
+                    return pageData;
+                }
+            },
+
+        };
+
+        var miyue_current_template = $('#miyue-current-template').html();
+        var miyue_history_template = $('#miyue-history-template').html();
+        var miyue_detail_template = $('#miyue-detail-template').html();
+        var miyue_feedback_template = $('#miyue-feedback-template').html();
+        var miyue_photos_template = $('#miyue-photos-template').html();
+        var MiYue = {
+
+            validated: false,
+
+            validate: function(password, callback){
+                $.ajax({
+                    url: basepath+"/a/miai/miaiPassword/validate",
+                    type: "post",
+                    data: {password: password},
+                    success: function(res){
+                        if(typeof callback == "function"){
+                            callback.apply(this, [res.success]);
+                        }
+                    }
+                });
+            },
+
+            Current: {
+
+                pageData: null,
+
+                init: function(){
+
+                    if(IsPC()){
+                        location.href = "miaiweb/miyue.jsp";
+                        return false;
+                    }
+                    _czc.push(﻿["_trackPageview","index.html?#/miyue/current"]);
+
+                    currentWindow = MiYue.Current;
+                    activeTab("/miyue/feedback");
+                    MiYue.Detail.close();
+
+                    MiYue.Current.getPageData(function(pageData){
+                        var rendered = Mustache.render(miyue_current_template, pageData);
+                        $("#\\/miyue\\/feedback").html(rendered);
+
+                        if(MiYue.validated){
+                            $("#miyue-password-container").hide();
+                            $("#miyue-content-container").show();
+                        }
+
+                        $("#validate_password_button").click(function(){
+                            var password = $("#password_input").val();
+                            MiYue.validate(password, function(success){
+                                if(success){
+                                    $("#miyue-password-container").hide();
+                                    $("#miyue-content-container").show();
+                                    MiYue.validated = true;
+                                }else{
+                                    mui.alert('密码错误！', '提示');
+                                }
+                            });
+                        });
+
+                        $("#server_button").click(function(){
+                            PageMask.showBoyQrCode();
+                        });
+
+                    });
+
+//                    $("#miyue-current-tab").click(function(){
+//                        console.log("================");
+//                    });
+                },
+                loadmore: function(){
+                    console.log("===loadmore===");
+                },
+
+                getPageData: function(callback){
+                    if(MiYue.Current.pageData != null && typeof callback == "function"){
+                        callback.apply(this, [MiYue.Current.pageData]);
+                        return;
+                    }
+                    $.ajax({
+                        url: basepath+"/a/miai/miaiAppointment/get/list",
+                        type: "get",
+                        data: {type: 1},
+                        success: function(res){
+                            MiYue.Current.pageData = res.data;
+                            $(res.data).each(function(idx, item){
+                                item.fullimageurl = basepath+item.photoUrl02+"?width=200&height=300"
+                            });
+                            if(typeof callback == "function"){
+                                callback.apply(this, [res.data]);
+                            }
+                        }
+                    });
+                }
+            },
+
+            History: {
+
+                pageData: null,
+
+                init: function(){
+
+                    if(IsPC()){
+                        location.href = "miaiweb/miyue.jsp";
+                        return false;
+                    }
+                    _czc.push(﻿["_trackPageview","index.html?#/miyue/history"]);
+
+                    currentWindow = MiYue.History;
+                    activeTab("/miyue/feedback");
+                    MiYue.Detail.close();
+
+                    MiYue.History.getPageData(function(pageData){
+                        var rendered = Mustache.render(miyue_history_template, {currentCity: currentCity, records: pageData});
+                        $("#\\/miyue\\/feedback").html(rendered);
+                    });
+
+                },
+                loadmore: function(){
+                    console.log("===loadmore===");
+                },
+                getPageData: function(callback){
+//                    if(MiYue.History.pageData != null && typeof callback == "function"){
+//                        callback.apply(this, [MiYue.History.pageData]);
+//                        return;
+//                    }
+                    $.ajax({
+                        url: basepath+"/a/miai/miaiAppointment/get/list",
+                        type: "get",
+                        data: {type: 0, place: currentCity},
+                        success: function(res){
+                            //MiYue.History.pageData = res.data;
+                            $(res.data).each(function(idx, item){
+                                item.fullimageurl = basepath+item.photoUrl02+"?width=200&height=300"
+                            });
+                            if(typeof callback == "function"){
+                                callback.apply(this, [res.data]);
+                            }
+                        }
+                    });
+                }
+            },
+            Detail: {
+
+                init: function(code){
+
+                    if(IsPC()){
+                        location.href = "miaiweb/miyue_detail.jsp?id="+code;
+                        return false;
+                    }
+
+                    _czc.push(﻿["_trackPageview","index.html?#/miyue/detail/"+code]);
+
+                    currentWindow = MiYue.History;
+                    activeTab("/miyue/feedback");
+                    MiYue.Detail.getPageData(code, function(pageData){
+                        var rendered = Mustache.render(miyue_detail_template, pageData);
+                        $("#miyue-detail-page").html(rendered);
+                        mui.previewImage();
+                        mui('.mui-slider').slider();
+
+                        $("#miyue-detail-page .button-join").click(PageMask.showBoyQrCode);
+                        $("#miyue-detail-page .button-intro").click(PageMask.showMemberQrCode);
+
+                    });
+
+                    $("#miyue-detail-page").show().removeClass("fadeOutRight").addClass("fadeInRight");
+                    $("#main-page").fadeOut();
+                },
+
+                close: function(){
+                    $("#main-page").show();
+                    $("#miyue-detail-page").removeClass("fadeInRight").addClass("fadeOutRight").fadeOut();
+                },
+
+                getPageData: function(code, callback){
+                    $.ajax({
+                        url: basepath+"/a/miai/miaiAppointment/get/one",
+                        type: "get",
+                        data: {id: code},
+                        success: function(res){
+                            var pageData = {firstbanner: null, lastbanner: null, banners:[], detail: null};
+                            pageData.detail = res.data;
+                            pageData.detail.headlogo = basepath+pageData.detail.photoUrl01+"?width=100&height=100"
+                            $(res.data.photos).each(function(idx, url){
+                                var sourceurl = basepath+url;
+                                var fullimageurl = basepath+url+"?width=900&height=750";
+                                if(idx == 0){
+                                    pageData.firstbanner = {fullimageurl:fullimageurl, sourceurl: sourceurl};
+                                }
+                                if(idx == res.data.photos.length-1){
+                                    pageData.lastbanner = {fullimageurl:fullimageurl, sourceurl: sourceurl};
+                                }
+                                pageData.banners.push({fullimageurl:fullimageurl, sourceurl: sourceurl});
+                            });
+                            if(typeof callback == "function"){
+                                callback.apply(this, [pageData]);
+                            }
+                        }
+                    });
+                }
+            },
+            Feedback: {
+
+                pageData: null,
+
+                init: function(){
+
+                    if(IsPC()){
+                        location.href = "miaiweb/feedback.jsp";
+                        return false;
+                    }
+                    _czc.push(﻿["_trackPageview","index.html?#/miyue/feedback"]);
+
+                    if(CustomPage.state){
+                        CustomPage.close();
+                    }
+
+                    currentWindow = MiYue.Feedback;
+                    activeTab("/miyue/feedback");
+
+                    MiYue.Feedback.getPageData(function(pageData){
+                        var rendered = Mustache.render(miyue_feedback_template, pageData);
+                        $("#\\/miyue\\/feedback").html(rendered);
+                    });
+
+                },
+                getPageData: function(callback){
+                    if(MiYue.Feedback.pageData != null && typeof callback == "function"){
+                        callback.apply(this, [MiYue.Feedback.pageData]);
+                        return;
+                    }
+                    $.ajax({
+                        url: basepath+"/a/miai/miaiFeedback/get/feedBackList",
+                        type: "get",
+                        success: function(res){
+                            MiYue.Feedback.pageData = res.data;
+                            $(res.data).each(function(idx, item){
+                                item.fullimageurl = basepath + item.imageurl+"?width=750&height=300"
+                            });
+                            if(typeof callback == "function"){
+                                callback.apply(this, [res.data]);
+                            }
+                        }
+                    });
+                }
+            },
+            Photos: {
+
+                pageData: null,
+
+                init: function(){
+
+                    if(IsPC()){
+                        location.href = "miaiweb/photos.jsp";
+                        return false;
+                    }
+                    _czc.push(﻿["_trackPageview","index.html?#/miyue/photos"]);
+
+                    currentWindow = MiYue.Photos;
+                    activeTab("/miyue/feedback");
+
+                    MiYue.Photos.getPageData(function(pageData){
+                        var rendered = Mustache.render(miyue_photos_template, pageData);
+                        $("#\\/miyue\\/feedback").html(rendered);
+
+                        var $photo_container1 = $("#miyue-photos-container1");
+                        var $photo_container2 = $("#miyue-photos-container2");
+                        $(pageData).each(function(idx, url){
+                            setTimeout(function(){
+                                if($photo_container1.height() > $photo_container2.height()){
+                                    $photo_container2.append('<img src="'+url+'" class="animated zoomIn" data-preview-src="" data-preview-group="9" style="width:100%;margin-bottom:5px"/>');
+                                }else{
+                                    $photo_container1.append('<img src="'+url+'" class="animated zoomIn" data-preview-src="" data-preview-group="9" style="width:100%;margin-bottom:5px"/>');
+                                }
+                            }, idx*100);
+                        });
+
+                        mui.previewImage();
+                    });
+
+                },
+
+                getPageData: function(callback){
+                    if(MiYue.Photos.pageData != null && typeof callback == "function"){
+                        callback.apply(this, [MiYue.Photos.pageData]);
+                        return;
+                    }
+                    $.ajax({
+                        url: basepath+"/a/miai/miaiPhoto/get/list",
+                        type: "get",
+                        success: function(res){
+                            var imageList = [];
+                            MiYue.Photos.pageData = imageList;
+                            $(res.data).each(function(idx, url){
+                                imageList.push(basepath + url+"?width=750");
+                            });
+                            if(typeof callback == "function"){
+                                callback.apply(this, [imageList]);
+                            }
+                        }
+                    });
+
+                }
+            }
+        };
+
+        var fanpai_template = $("#fanpai-template").html();
+        var fanpai_cities_template = $("#fanpai-cities-template").html();
+        var fanpai_hougong_template = $("#fanpai-hougong-template").html();
+        var FanPai = {
+
+            pageData:{},
+            selected:[],
+            remain:[],
+
+            init: function(){
+
+                if(IsPC()){
+                    location.href = "miaiweb/carousel.jsp";
+                    return false;
+                }
+                _czc.push(﻿["_trackPageview","index.html?#/fanpai"]);
+
+                currentWindow = FanPai;
+                activeTab("/fanpai");
+                var pageData = FanPai.getPageData(currentCity);
+                //console.log(pageData);
+                pageData.currentCity = currentCity;
+                var rendered = Mustache.render(fanpai_template, pageData);
+                $("#\\/fanpai").html(rendered);
+
+                var currentIndex = 0;
+                function addOneItem(item){
+                    $("#fanpai-container").append('<div id="'+item.id+'"><img src="'+item.fullimageurl+'" data-preview-src="'+item.sourceurl+'" data-preview-group="'+currentIndex*10+'"/><span>'+item.age+'岁 '+item.height+'cm '+item.weight+'kg</span></div>');
+                    currentIndex++;
+                }
+
+                $(pageData.remain).each(function(idx, item){
+                    if(idx>=3){
+                        return;
+                    }
+                    addOneItem(item);
+                });
+
+                $("#fanpai-container div").each(function(idx, obj){
+                    $(obj).removeClass("track0").removeClass("track1").removeClass("track2").addClass("track"+idx);
+                });
+                mui.previewImage();
+                FanPai.HouGong.close();
+
+                $("#fanpai-container").css("height",$("#fanpai-container").width()+"px");
+                $("#fanpai-container").parent().css("width", $(window).width()+"px");
+
+                //不喜欢
+                $("#fanpai-notlike-button").click(function(){
+                    $("#fanpai-container div").first().animate({left:"-500px", top: Math.random()*-500+"px"}, 500, function(){
+                        $(this).remove();
+                        addOneItem(pageData.remain[currentIndex]);
+                        $("#fanpai-container div").each(function(idx, obj){
+                            $(obj).removeClass("track0").removeClass("track1").removeClass("track2").addClass("track"+idx);
+                        });
+                        if($("#fanpai-container div").length == 0 && FanPai.getPageData(currentCity).remain.length > 0){
+                            var btnArray = ['否', '是'];
+                            mui.confirm('已经没有了哦，是否再次筛选？', '提示', btnArray, function(e) {
+                                if (e.index == 1) {
+                                    FanPai.init();
+                                }
+                            });
+                        }
+                    });
+                });
+                //喜欢
+                $("#fanpai-like-button").click(function(){
+                    $("#fanpai-container div").first().animate({left:"500px", top:Math.random()*-500+"px"}, 500, function(){
+                        $(this).remove();
+                        addOneItem(pageData.remain[currentIndex]);
+                        $("#fanpai-container div").each(function(idx, obj){
+                            $(obj).removeClass("track0").removeClass("track1").removeClass("track2").addClass("track"+idx);
+                        });
+
+                        var id = $(this).attr("id");
+                        FanPai.addToHougong(id, function(item){
+                            $("#fanpai_selected_count").text(FanPai.selected.length);
+
+                            if($("#fanpai-container div").length == 0 && FanPai.getPageData(currentCity).remain.length > 0){
+                                var btnArray = ['否', '是'];
+                                mui.confirm('已经没有了哦，是否再次筛选？', '提示', btnArray, function(e) {
+                                    if (e.index == 1) {
+                                        FanPai.init();
+                                    }
+                                });
+                            }
+
+                        });
+
+                    });
+                });
+
+                var state = {};
+                $("#fanpai-container").on("touchstart", "div", function(event){
+                    //event.stopPropagation();
+                    event.preventDefault();
+                    var touch = event.touches[0];
+                    state = {left: 0, top: 0, pageX: touch.pageX, pageY: touch.pageY};
+                    //console.log($(this).css("left"));
+                    //console.log("start");
+                }).on("touchmove", "div", function(event){
+                    //event.stopPropagation();
+                    event.preventDefault();
+                    var touch = event.touches[0];
+                    $(this).css({left: state.left+(touch.pageX-state.pageX)+"px", top: state.top+(touch.pageY-state.pageY)+"px"});
+                    //console.log($(this).css("left"));
+                }).on("touchend", "div", function(event){
+                    var $this = $(this);
+                    var id = $(this).attr("id");
+
+                    if(Math.abs(parseInt($this.css("left"))) > $this.width()/2){
+                        var touch = event.originalEvent.changedTouches[0];
+                        var offsetx = touch.pageX-state.pageX;
+                        var offsety = touch.pageY-state.pageY;
+                        var baseline = Math.sqrt(Math.pow(500, 2)/(Math.pow(offsetx, 2)+Math.pow(offsety,2)));
+
+                        if(offsetx > 0){
+                            FanPai.addToHougong(id, function(item){
+                                $("#fanpai_selected_count").text(FanPai.selected.length);
+                            });
+                        }
+
+                        $(this).animate({left: offsetx*baseline+"px", top: offsety*baseline+"px"},500, function(){
+                            $this.remove();
+                            addOneItem(pageData.remain[currentIndex]);
+                            //$("#fanpai-container").append('<div><img src="img/4.jpg"/><span>24岁 172cm 48kg</span></div>');
+                            $("#fanpai-container div").each(function(idx, obj){
+                                $(obj).removeClass("track0").removeClass("track1").removeClass("track2").addClass("track"+idx);
+                            });
+
+                            if($("#fanpai-container div").length == 0 && FanPai.getPageData(currentCity).remain.length > 0){
+                                var btnArray = ['否', '是'];
+                                mui.confirm('已经没有了哦，是否再次筛选？', '提示', btnArray, function(e) {
+                                    if (e.index == 1) {
+                                        FanPai.init();
+                                    }
+                                });
+                            }
+
+                        });
+
+                    }else{
+                        $this.animate({left:"0px", top:"0px"});
+                    }
+                    //console.log("end");
+                }).on("touchcancel", "div", function(){
+                    //console.log("cancel");
+                });
+
+            },
+
+            getPageData: function(place, uuid){
+
+                if(!uuid) {
+                    uuid = FanPai.getCachedUUID();
+                }
+
+                var pageData = {all:[], selected:[], remain:[], uuid: uuid};
+                var allList = FanPai.pageData[place];
+
+                if(allList != undefined && allList != null){
+                    pageData.all = allList;
+                    pageData.selected = FanPai.selected;
+                }
+
+                if(allList == null || allList == undefined) {
+
+                    $.ajax({
+                        url: basepath + "/a/miai/miaiUser/getTransferList",
+                        type: "get",
+                        data: { place: currentCity },
+                        async: false,
+                        success: function (res) {
+                            pageData.all = res.data;
+                        }
+                    });
+                    $.ajax({
+                        url: basepath + "/a/miai/miaiHarem/get/some?userId=" + uuid,
+                        type: "get",
+                        async: false,
+                        success: function (res) {
+                            pageData.selected = res.data;
+                        }
+                    });
+
+                    FanPai.pageData[place] = pageData.all;
+                    FanPai.selected = pageData.selected;
+
+                    $(pageData.all).each(function (idx, record) {
+                        record.fullimageurl = basepath + record.photoUrl02 + "?width=600&height=600";
+                        record.hougongurl = basepath + record.photoUrl02 + "?width=600&height=800";
+                        record.sourceurl = basepath + record.photoUrl02 + "?width=750";
+                    });
+                    $(pageData.selected).each(function (idx, record) {
+                        record.fullimageurl = basepath + record.photoUrl02 + "?width=600&height=600";
+                        record.hougongurl = basepath + record.photoUrl02 + "?width=600&height=800";
+                        record.sourceurl = basepath + record.photoUrl02 + "?width=750";
+                    });
+                }
+
+                for(var i=0; i<pageData.all.length; i++){
+                    var state = true;
+                    for(var j=0; j<pageData.selected.length; j++){
+                        if(pageData.all[i].id == pageData.selected[j].id){
+                            state = false;
+                            break;
+                        }
+                    }
+                    if(state){
+                        pageData.remain.push(pageData.all[i]);
+                    }
+                }
+                FanPai.remain = pageData.remain;
+
+                return pageData;
+            },
+
+            removeAllFromHougong: function(callback){
+                var uuid = FanPai.getCachedUUID();
+                $.ajax({
+                    url: basepath+"/a/miai/miaiHarem/remove/some",
+                    data: {userId:uuid},
+                    type: "get",
+                    success: function(res){
+                        FanPai.selected = [];
+                        if(typeof callback == "function"){
+                            callback.apply(this, []);
+                        }
+                    }
+                });
+            },
+
+            removeFromHougong: function(id, callback){
+                var uuid = FanPai.getCachedUUID();
+                $.ajax({
+                    url: basepath+"/a/miai/miaiHarem/remove/one",
+                    data: {userId:uuid, targetId: id},
+                    type: "get",
+                    success: function(res){
+                        $(FanPai.selected).each(function(idx, record){
+                            if(record.id == id){
+                                FanPai.selected.splice(idx, 1);
+                                if(typeof callback == 'function'){
+                                    callback.apply(this, [record]);
+                                }
+                            }
+                        });
+                    }
+                });
+            },
+
+            addToHougong: function(id, callback){
+                var item = null;
+                $(FanPai.pageData[currentCity]).each(function(idx, record){
+                    if(record.id == id){
+                        item = record;
+                    }
+                });
+                if(item == null){
+                    return;
+                }
+                //console.log(item);
+                var uuid = FanPai.getCachedUUID();
+                $.ajax({
+                    url: basepath+"/a/miai/miaiHarem/save/one",
+                    data: {userId:uuid, targetId: item.id},
+                    type: "get",
+                    success: function(res){
+                        FanPai.selected.push(item);
+                        if(typeof callback == 'function'){
+                            callback.apply(this, [item]);
+                        }
+                    }
+                });
+            },
+
+            getCachedUUID: function(){
+                var uuid = $.cookie('fanpai_uuid');
+                if(uuid == null){
+                    uuid = new Date().getTime();
+                    $.cookie('fanpai_uuid', uuid);
+                }
+                return uuid;
+            },
+
+            Cities: {
+
+                pageData: null,
+
+                init: function(){
+                    currentWindow = FanPai.Cities;
+                    activeTab("/fanpai");
+
+                    var pageData = FanPai.Cities.getPageData(0);
+                    var rendered = Mustache.render(fanpai_cities_template, pageData);
+                    $("#\\/fanpai").html(rendered);
+
+                    $(".city-item").click(function(){
+                        currentCity = $(this).text();
+                        history.back();
+                    });
+
+                    $("#city-inside").click(function(){
+                        $("#city-outside").removeClass("active");
+                        $(this).addClass("active");
+                        $("#city-inside-container").show();
+                        $("#city-outside-container").hide();
+                    });
+
+                    $("#city-outside").click(function(){
+                        $("#city-inside").removeClass("active");
+                        $(this).addClass("active");
+                        $("#city-inside-container").hide();
+                        $("#city-outside-container").show();
+                    });
+                },
+
+                getPageData: function(type){
+                    if(FanPai.Cities.pageData != null){
+                        return FanPai.Cities.pageData;
+                    }
+                    var pageData = {hots:[], inside:[], outside:[]};
+                    FanPai.Cities.pageData = pageData;
+                    $.ajax({
+                        url: basepath+"/a/miai/miaiProvince/get/List?type="+type,
+                        type: "get",
+                        async:false,
+                        success: function(res){
+                            pageData.hots = res["hot"];
+
+                            $(Object.keys(res.inside)).each(function(idx, key){
+                                var record = {label: key, group: true};
+                                pageData.inside.push(record);
+                                var values = res.inside[key];
+                                $(values).each(function(idx, value){
+                                    pageData.inside.push({label: value, group: false});
+                                });
+                            });
+
+                            $(Object.keys(res.outside)).each(function(idx, key){
+                                var record = {label: key, group: true};
+                                pageData.outside.push(record);
+                                var values = res.outside[key];
+                                $(values).each(function(idx, value){
+                                    pageData.outside.push({label: value, group: false});
+                                });
+                            });
+                        }
+                    });
+                    return pageData;
+                }
+            },
+
+            HouGong: {
+                init: function(uuid){
+
+                    if(IsPC()){
+                        location.href = "miaiweb/hougong.jsp";
+                        return false;
+                    }
+
+                    _czc.push(﻿["_trackPageview","index.html?#/fanpai/hougong/"+uuid]);
+
+                    currentWindow = FanPai.HouGong;
+                    activeTab("/fanpai");
+                    var pageData = FanPai.getPageData(currentCity, uuid);
+                    var rendered = Mustache.render(fanpai_hougong_template, pageData);
+                    $("#fanpai-hougong-page").html(rendered);
+
+                    mui.previewImage();
+
+                    $("#hougong-photos-container img").css("height", ($(window).width()-50)/2/3*4+"px");
+
+                    if(pageData.selected.length>0){
+                        $("#hougong-photos-container").show();
+                        $("#hougong-photos-container-none").hide();
+                        $("#hougong-photos-share").show();
+                    }else{
+                        $("#hougong-photos-container").hide();
+                        $("#hougong-photos-container-none").show();
+                        $("#hougong-photos-share").hide();
+                    }
+
+                    $(".hougong-item-trash").click(function(){
+                        var $this = $(this);
+                        var id = $this.attr("data");
+                        FanPai.removeFromHougong(id, function(){
+                            $this.parent().parent().parent().remove();
+                            if(pageData.selected.length == 0){
+                                $("#hougong-photos-container").hide();
+                                $("#hougong-photos-container-none").show();
+                                $("#hougong-photos-share").hide();
+                            }
+                        });
+                    });
+
+                    $("#hougong-clear-button").click(function(){
+                        FanPai.removeAllFromHougong(function(){
+                            $("#hougong-photos-container").hide();
+                            $("#hougong-photos-container-none").show();
+                            $("#hougong-photos-share").hide();
+                        });
+                    });
+
+                    $("#hougong-share-button").click(function(){
+                        location.href = "share.html#/share/"+uuid;
+                    });
+
+//                    if(document.referrer == ""){
+//                        $("#hougong-photos-share").hide();
+//                        $(".hougong-item-trash").parent().remove();
+//                    }
+
+                    $("#fanpai-hougong-page").fadeIn().removeClass("fadeOutRight").addClass("fadeInRight");
+                    $("#main-page").fadeOut();
+                },
+
+                close: function(){
+                    $("#main-page").show();
+                    $("#fanpai-hougong-page").removeClass("fadeInRight").addClass("fadeOutRight").fadeOut();
+                }
+            }
+        }
+
+        var joinus_template = $("#joinus-template").html();
+        var JoinUs = {
+            init: function(){
+
+                if(IsPC()){
+                    location.href = "miaiweb/joinus.jsp";
+                    return false;
+                }
+
+                _czc.push(﻿["_trackPageview","index.html?#/joinus"]);
+
+                CustomPage.close();
+                currentWindow = JoinUs;
+                activeTab("/joinus");
+                var rendered = Mustache.render(joinus_template);
+                $("#\\/joinus").html(rendered).css("height", $(window).height()+"px");
+
+                $("#boy_channel_button").click(PageMask.showBoyQrCode);
+                $("#girl_channel_button").click(PageMask.showGrilQrCode);
+                $("#weixin_button").click(PageMask.showWeiXin);
+            }
+        }
+
+        var custom_page_template = $("#custom-page-template").html();
+        var CustomPage = {
+
+            state: false,
+
+            init: function(code){
+
+                if(IsPC()){
+                    location.href = "miaiweb/custom.jsp#/custompage/"+code;
+                    return false;
+                }
+
+                _czc.push(﻿["_trackPageview","index.html?#/custompage/"+code]);
+
+                currentWindow = CustomPage;
+
+                CustomPage.getPageData(code, function(pageData){
+                    var rendered = Mustache.render(custom_page_template, pageData);
+                    $("#custom-page").html(rendered);
+                    $("#custom-page img").css("width", "100%");
+                });
+
+                $("#custom-page").fadeIn().removeClass("fadeOutRight").addClass("fadeInRight");
+                $("#main-page").fadeOut();
+                CustomPage.state = true;
+            },
+
+            close: function(){
+                $("#main-page").show();
+                $("#custom-page").removeClass("fadeInRight").addClass("fadeOutRight").fadeOut();
+                CustomPage.state = false;
+            },
+
+            getPageData: function(code, callback){
+                $.ajax({
+                    url: basepath + "/a/miai/miaiPage/get/one",
+                    type: "get",
+                    data: {id: code},
+                    success: function (res) {
+                        res.data.fullimageurl = basepath + res.data.imageurl+"?width=700"
+                        if(typeof callback == "function"){
+                            callback.apply(this, [res.data]);
+                        }
+                    }
+                });
+            }
+        }
+
+        var qrcode_girl_template = $("#qrcode-girl-template").html();
+        var qrcode_boy_template = $("#qrcode-boy-template").html();
+        var qrcode_member_template = $("#qrcode-member-template").html();
+        var qrcode_girl_channel_template = $("#qrcode-girl-channel-template").html();
+        var qrcode_boy_channel_template = $("#qrcode-boy-channel-template").html();
+        var qrcode_weixin_template = $("#qrcode-weixin-template").html();
+        var hougong_share_template = $("#hougong-share-template").html();
+
+        var PageMask = {
+
+            QRCODE_BOY: "1",
+            QRCODE_GIRL: "2",
+            QRCODE_MEMBER: "3",
+            QRCODE_BOY_CHANNEL: "2",
+            QRCODE_GIRL_CHANNEL: "3",
+            QRCODE_WEIXIN: "4",
+
+            pageData: null,
+
+            getPageData: function(type, callback){
+                if(PageMask.pageData != null && typeof callback == "function"){
+                    $(PageMask.pageData).each(function(idx, item){
+                        if(item.type == type) {
+                            callback.apply(this, [item]);
+                        }
+                    });
+                    return;
+                }
+                $.ajax({
+                    url: basepath+"/a/miai/miaiQrcode/get/list",
+                    type: "get",
+                    async:false,
+                    success: function(res){
+                        PageMask.pageData = res.data;
+                        $(res.data).each(function(idx, item){
+                            item.fullimageurl = basepath+item.url+"?width=200&height=200";
+                        });
+                        if(typeof callback == "function"){
+                            $(res.data).each(function(idx, item){
+                                if(item.type == type) {
+                                    callback.apply(this, [item]);
+                                }
+                            });
+                        }
+                    }
+                });
+            },
+
+            center: function($el){
+                var winh = $(window).height();
+                var winw = $(window).width();
+                var elh = $el.height();
+                var elw = $el.width();
+                $el.css({left: (winw-elw)/2+"px", top: (winh-elh)/2+"px"});
+            },
+
+            showGrilQrCode: function(){
+
+                PageMask.getPageData(PageMask.QRCODE_GIRL, function(data){
+
+                    var rendered = Mustache.render(qrcode_girl_template, data);
+                    var $qrcode = $(rendered);
+                    $(document.body).append($qrcode);
+                    PageMask.center($qrcode);
+                    var mask = mui.createMask(function(){
+                        $qrcode.remove();
+                    });
+                    mask.show();
+                });
+
+            },
+
+            showBoyQrCode: function(){
+
+                PageMask.getPageData(PageMask.QRCODE_BOY, function(data) {
+                    var rendered = Mustache.render(qrcode_boy_template, data);
+                    var $qrcode = $(rendered);
+                    $(document.body).append($qrcode);
+                    PageMask.center($qrcode);
+                    var mask = mui.createMask(function () {
+                        $qrcode.remove();
+                    });
+                    mask.show();
+                });
+            },
+
+            showMemberQrCode: function(){
+
+                PageMask.getPageData(PageMask.QRCODE_MEMBER, function(data) {
+                    var rendered = Mustache.render(qrcode_member_template, data);
+                    var $qrcode = $(rendered);
+                    $(document.body).append($qrcode);
+                    PageMask.center($qrcode);
+                    var mask = mui.createMask(function () {
+                        $qrcode.remove();
+                    });
+                    mask.show();
+                });
+            },
+
+            showGirlChannel: function(){
+                PageMask.getPageData(PageMask.QRCODE_GIRL_CHANNEL, function(data) {
+                    var rendered = Mustache.render(qrcode_girl_channel_template, data);
+                    var $qrcode = $(rendered);
+                    $(document.body).append($qrcode);
+                    PageMask.center($qrcode);
+                    var mask = mui.createMask(function () {
+                        $qrcode.remove();
+                    });
+                    mask.show();
+                });
+            },
+
+            showBoyChannel: function(){
+                PageMask.getPageData(PageMask.QRCODE_BOY_CHANNEL, function(data) {
+                    var rendered = Mustache.render(qrcode_boy_channel_template, data);
+                    var $qrcode = $(rendered);
+                    $(document.body).append($qrcode);
+                    PageMask.center($qrcode);
+                    var mask = mui.createMask(function () {
+                        $qrcode.remove();
+                    });
+                    mask.show();
+                });
+            },
+
+            showWeiXin: function(){
+                PageMask.getPageData(PageMask.QRCODE_WEIXIN, function(data) {
+                    var rendered = Mustache.render(qrcode_weixin_template, data);
+                    var $qrcode = $(rendered);
+                    $(document.body).append($qrcode);
+                    PageMask.center($qrcode);
+                    var mask = mui.createMask(function () {
+                        $qrcode.remove();
+                    });
+                    mask.show();
+                });
+            },
+
+            showShare: function(){
+                var rendered = Mustache.render(hougong_share_template);
+                var $content = $(rendered);
+                $(document.body).append($content);
+                PageMask.center($content);
+                var mask = mui.createMask(function () {
+                    $content.remove();
+                });
+                mask.show();
+
+                $("#hougong_share_close_button").click(function(){
+                    mask.close();
+                });
+            }
+        };
+
+//        $(document).scroll(function(e){
+//            if(document.documentElement.scrollHeight == document.documentElement.scrollTop+document.documentElement.clientHeight){
+//                if(currentWindow != null && typeof currentWindow.loadmore == "function"){
+//                    currentWindow.loadmore();
+//                }
+//            }
+//        });
+
+        var routes = {
+            '/homepage': HomePage.init,
+            '/homepage/girlpage/:code': HomePage.GirlPage.init,
+            '/homepage/boypage/:code' : HomePage.BoyPage.init,
+            '/miyue/current' : MiYue.Current.init,
+            '/miyue/history' : MiYue.History.init,
+            '/miyue/detail/:code': MiYue.Detail.init,
+            '/miyue/feedback' : MiYue.Feedback.init,
+            '/miyue/photos': MiYue.Photos.init,
+            '/fanpai': FanPai.init,
+            '/fanpai/cities': FanPai.Cities.init,
+            '/fanpai/hougong/:uuid':FanPai.HouGong.init,
+            '/joinus': JoinUs.init,
+            '/custompage/:code': CustomPage.init
+        };
+
+
+        var router = Router(routes);
+        router.init("/homepage");
+
+
+    });
+
+
+
+</script>
+</html>

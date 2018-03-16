@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello MUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <style>
+        .homepage .mui-slider img{
+            height:163px;
+        }
+        .homepage .medal{
+            width:13px;
+            height:16px;
+            float:left;
+        }
+        .homepage .card-title{
+            width:119px;
+            height:16px;
+            font-size:16px;
+            font-family:PingFangSC-Medium;
+            line-height:16px;
+            float:left;
+            margin-left:5px;
+        }
+        .homepage .mui-card-content-inner{
+            height:130px;
+            width:1000px;
+            overflow:hidden;
+        }
+        .homepage .mui-card-content-inner img{
+            width:100px;
+            height:100px;
+            margin-right:10px;
+            border-radius:5px;
+        }
+    </style>
+</head>
+
+<body>
+
+        <nav class="mui-bar mui-bar-tab">
+            <a class="mui-tab-item mui-active" href="#/tabbar-homepage">
+                <span class="mui-icon mui-icon-home"></span>
+                <span class="mui-tab-label">首页</span>
+            </a>
+            <a class="mui-tab-item" href="#tabbar-miyue">
+                <span class="mui-icon mui-icon-email"></span>
+                <span class="mui-tab-label">秘约记录</span>
+            </a>
+            <a class="mui-tab-item" href="#tabbar-fanpai">
+                <span class="mui-icon mui-icon-contact"></span>
+                <span class="mui-tab-label">翻牌</span>
+            </a>
+            <a class="mui-tab-item" href="#tabbar-joinus">
+                <span class="mui-icon mui-icon-gear"></span>
+                <span class="mui-tab-label">加入我们</span>
+            </a>
+        </nav>
+        <div class="mui-content">
+
+            <div id="/tabbar-homepage" class="mui-control-content mui-active homepage">
+
+                <div id="homepage-slider" class="mui-slider" >
+                    <div class="mui-slider-group mui-slider-loop">
+                        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#">
+                                <img src="img/banner1.png">
+                            </a>
+                        </div>
+                        <!-- 第一张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="img/banner1.png">
+                            </a>
+                        </div>
+                        <!-- 第二张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="img/banner2.png">
+                            </a>
+                        </div>
+                        <!-- 第三张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="img/banner1.png">
+                            </a>
+                        </div>
+                        <!-- 第四张 -->
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="img/banner1.png">
+                            </a>
+                        </div>
+                        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#">
+                                <img src="img/banner1.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                    </div>
+                </div>
+
+                <div class="mui-card" style="margin:0px;">
+                    <div class="mui-card-header">
+                        <div>
+                            <img class="medal" src="img/medal-pink.png"/>
+                            <span class="card-title">今日女生</span>
+                        </div>
+                    </div>
+                    <div class="mui-card-content" style="overflow: scroll;">
+                        <div class="mui-card-content-inner">
+                            <img src="img/1.jpg"/>
+                            <img src="img/2.jpg"/>
+                            <img src="img/3.jpg"/>
+                            <img src="img/4.jpg"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mui-card" style="margin:10px 0px;">
+                    <div class="mui-card-header">
+                        <div>
+                            <img class="medal" src="img/medal-blue.png"/>
+                            <span class="card-title">今日男生</span>
+                        </div>
+                    </div>
+                    <div class="mui-card-content" style="overflow: scroll;">
+                        <div class="mui-card-content-inner">
+                            <img src="img/1.jpg"/>
+                            <img src="img/2.jpg"/>
+                            <img src="img/3.jpg"/>
+                            <img src="img/4.jpg"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="tabbar-miyue" class="mui-control-content">
+                22
+            </div>
+            <div id="tabbar-fanpai" class="mui-control-content">
+                33
+            </div>
+            <div id="tabbar-joinus" class="mui-control-content">
+                44
+            </div>
+
+        </div>
+
+
+</body>
+<script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/director.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        mui('body').on('tap','a',function(){
+            window.top.location.href=this.href;
+        });
+
+        location.href = "#/tabbar-homepage";
+
+        function homepage(){
+            $(".homepage .mui-card-content-inner").each(function(){
+                $(this).css("width", $("img", this).length*125+"px");
+            });
+        }
+        var routes = {
+            '/tabbar-homepage': homepage
+        };
+        var router = Router(routes);
+        router.init();
+
+    });
+</script>
+</html>
